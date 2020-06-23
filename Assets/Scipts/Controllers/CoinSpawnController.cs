@@ -81,9 +81,14 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            var coin = CreateCoin();
-            coin.transform.position = GetCoinDropPosition();
+            QueueCoin();
         }
+    }
+
+    public void QueueCoin()
+    {
+        var coin = CreateCoin();
+        coin.transform.position = GetCoinDropPosition();
     }
 
     public void Load(RawCoinSpawnControllerData data)

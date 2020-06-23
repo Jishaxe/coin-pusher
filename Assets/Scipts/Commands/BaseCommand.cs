@@ -7,6 +7,7 @@ using Zenject;
 
 public enum CommandType
 {
+    NONE,
     QUEUE_COIN,
     CLEAR_BOARD
 }
@@ -15,7 +16,7 @@ public class RawCommand
 {
     public string type;
     public string id;
-    public double time;
+    public string time;
     public string data;
 }
 
@@ -51,17 +52,32 @@ public class CommandFactory : IFactory<RawCommand, BaseCommand>
         }
 
         Debug.Assert(baseCommand != null, "Couldn't match command " + rawCommand.type);
-        baseCommand.Initialize(rawCommand.id, rawCommand.time);
+
+        DateTime time = CommandUtils.ParseUTCTimeString(rawCommand.time);
+        
+        baseCommand.Initialize(rawCommand.id, time);
         baseCommand.Load(rawCommand.data);
+        
         return baseCommand;
     }
 }
 
 public class BaseCommand
 {
-    protected string _id;
-    protected double _time;
+    public string ID
+    {
+        get;
+        protected set;
+    }
+
+    public DateTime Time
+    {
+        get;
+        protected set;
+    }
+    
     protected ICommandData _data;
+    protected CommandType _type;
     
     public sealed class Factory : PlaceholderFactory<RawCommand, BaseCommand>
     {
@@ -74,10 +90,10 @@ public class BaseCommand
         
     }
 
-    public void Initialize(string id, double time)
+    public void Initialize(string id, DateTime time)
     {
-        _id = id;
-        _time = time;
+        ID = id;
+        Time = time;
     }
     
     public void Acknowledge()
@@ -88,6 +104,16 @@ public class BaseCommand
     public virtual void Load(string data)
     {
         throw new NotImplementedException();
+    }
+
+    public RawCommand Save()
+    {
+        var raw = new RawCommand();
+        raw.id = ID;
+        raw.time = CommandUtils.DateTimeToUTCString(Time);
+        raw.data = JsonConvert.SerializeObject(_data);
+        raw.type = _type.ToString();
+        return raw;
     }
 
     protected void LoadCommandData<T>(string data) where T: ICommandData
@@ -112,5 +138,15 @@ public static class CommandUtils
         }
         
         return type;
+    }
+
+    public static DateTime ParseUTCTimeString(in string utcString)
+    {
+        return DateTime.Parse(utcString);
+    }
+
+    public static string DateTimeToUTCString(DateTime time)
+    {
+        return time.ToUniversalTime().ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'");
     }
 }

@@ -95,7 +95,7 @@ public class RemoteController: MonoBehaviour
             yield break;
         }
 
-        _commandController.HandleRawCommands(ParseCommands(result.text));
+        _commandController.AddRawCommands(ParseCommands(result.text));
         
         _pollCoroutine = null;
     }

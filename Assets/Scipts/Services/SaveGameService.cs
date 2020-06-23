@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using Newtonsoft.Json;
 using UnityEngine;
 using Zenject;
@@ -8,6 +9,7 @@ public class SaveGameData
 {
     public RawCoinSpawnControllerData CoinSpawnController;
     public RawPusherControllerData PusherController;
+    public RawCommandController CommandController;
 }
 
 public class SaveGameService
@@ -17,12 +19,14 @@ public class SaveGameService
     
     private readonly CoinSpawnController _coinSpawnController;
     private readonly PusherController _pusherController;
+    private readonly CommandController _commandController;
     
     [Inject]
-    public SaveGameService(CoinSpawnController coinSpawnController, PusherController pusherController)
+    public SaveGameService(CoinSpawnController coinSpawnController, PusherController pusherController, CommandController commandController)
     {
         _coinSpawnController = coinSpawnController;
         _pusherController = pusherController;
+        _commandController = commandController;
     }
 
     public void SaveGame()
@@ -30,7 +34,8 @@ public class SaveGameService
         var saveGame = new SaveGameData();
         saveGame.CoinSpawnController = _coinSpawnController.Save();
         saveGame.PusherController = _pusherController.Save();
-        SaveJson(JsonConvert.SerializeObject(saveGame));
+        saveGame.CommandController = _commandController.Save();
+        SaveJson(JsonConvert.SerializeObject(saveGame, Formatting.Indented));
     }
     
     public void ClearSave()
@@ -44,6 +49,13 @@ public class SaveGameService
         PlayerPrefs.SetString(k_savedatakey, json);
         PlayerPrefs.Save();
         
+        string path = "savedataview.json";
+        
+        StreamWriter writer = new StreamWriter(path, false);
+        writer.Write(json);
+        writer.Close();
+        
+        
         Debug.Log("Saved data: " + json);
     }
 
@@ -56,8 +68,11 @@ public class SaveGameService
         }
         
         var saveGame = JsonConvert.DeserializeObject<SaveGameData>(json);
+        
+        // TODO: Check for null here
         _coinSpawnController.Load(saveGame.CoinSpawnController);
         _pusherController.Load(saveGame.PusherController);
+        _commandController.Load(saveGame.CommandController);
     }
 
     private bool TryGetJson(out string json)
