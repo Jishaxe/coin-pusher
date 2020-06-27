@@ -15,7 +15,7 @@ public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>
         
         Container.BindInstance(CoinSpawnerSettings);
         Container.BindInterfacesAndSelfTo<CoinSpawnController>().AsSingle();
-        Container.BindFactory<Coin, Coin.Factory>().FromComponentInNewPrefab(CoinSpawnerSettings.coinPrefab);
+        Container.BindFactory<Coin, Coin, Coin.Factory>().FromFactory<CoinFactory>();
 
         Container.BindInstance(PusherSettings);
         Container.BindInterfacesAndSelfTo<PusherController>().AsSingle();

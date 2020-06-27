@@ -11,11 +11,13 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
     private readonly BoardController _boardController;
 
     private List<Coin> _coins = new List<Coin>();
+
+    private List<Coin> _coinPrefabsSortedByValue = new List<Coin>();
     
     [Serializable]
     public sealed class Settings
     {
-        public Coin coinPrefab;
+        public List<Coin> coinPrefabs;
         public Vector3 randomCoinDropOffsetFromCenter;
         public float distanceBetweenCoins;
         public float coinRadius;
@@ -27,6 +29,14 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
         _settings = settings;
         _coinFactory = coinFactory;
         _boardController = boardController;
+        
+        ProcessCoinPrefabs();
+    }
+
+    private void ProcessCoinPrefabs()
+    {
+        _coinPrefabsSortedByValue = _settings.coinPrefabs.OrderByDescending(coin => coin.value).ToList();
+        Debug.Assert(!_coinPrefabsSortedByValue.Any((coin) => coin.value == 0), "Coin has zero value");
     }
 
     public void PopulateBoard()
@@ -45,8 +55,8 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
                 // if this coin will hit the funnel, then ignore
                 if (hitColliders.Contains(_boardController.FunnelCollider)) continue;
 
-                var coin = CreateCoin();
-                coin.transform.position = new Vector3(x, bounds.center.y, z);
+                //var coin = CreateCoin();
+               // coin.transform.position = new Vector3(x, bounds.center.y, z);
             }
         }
     }
@@ -61,9 +71,9 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
         _coins.Clear();
     }
 
-    private Coin CreateCoin()
+    private Coin CreateCoin(Coin coinDef)
     {
-        var coin = _coinFactory.Create();
+        var coin = _coinFactory.Create(coinDef);
         _coins.Add(coin);
         
         return coin;
@@ -88,8 +98,31 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
     public void QueueDonation(string name, string message, float amount)
     {
         Debug.Log($"Queuing donation, name: {name}, message: {message}, amount: {amount}");
-        var coin = CreateCoin();
-        coin.transform.position = GetCoinDropPosition();
+        var coins = BreakDownBalanceIntoCoins(amount);
+
+        foreach (Coin coin in coins)
+        {
+            var newCoin = _coinFactory.Create(coin);
+            newCoin.transform.position = GetCoinDropPosition();
+        }
+       
+    }
+    
+    private List<Coin> BreakDownBalanceIntoCoins(float amount)
+    {
+        var results = new List<Coin>();
+        
+        while (amount > 0)
+        {
+            var candidates = _coinPrefabsSortedByValue.Where((cn) => cn.value <= amount);
+            if (!candidates.Any()) break;
+
+            var coin = candidates.First();
+            results.Add(coin);
+            amount -= coin.value;
+        }
+
+        return results;
     }
 
     public void Load(RawCoinSpawnControllerData data)
@@ -98,8 +131,8 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
         
         foreach (var rawCoinData in data.coins)
         {
-            var coin = CreateCoin();
-            coin.Load(rawCoinData);
+            //var coin = CreateCoin();
+            //coin.Load(rawCoinData);
         }
     }
 

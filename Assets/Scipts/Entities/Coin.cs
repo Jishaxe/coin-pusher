@@ -3,11 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
+public class CoinFactory : IFactory<Coin, Coin>
+{
+    private DiContainer _container;
+    
+    public CoinFactory(DiContainer container)
+    {
+        _container = container;
+    }
+    
+    public Coin Create(Coin coinDef)
+    {
+        return _container.InstantiatePrefab(coinDef.gameObject).GetComponent<Coin>();
+    }
+}
+
 public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
 {
     private Rigidbody _rigidbody;
+
+    public float value;
     
-    public class Factory : PlaceholderFactory<Coin>
+    public class Factory : PlaceholderFactory<Coin, Coin>
     {
         
     }
