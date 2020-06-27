@@ -27,6 +27,7 @@ public class RemoteController: MonoBehaviour
     private Coroutine _pollCoroutine;
     
     private Settings _settings;
+    private SecretService _secretService;
     private CommandController _commandController;
     
     [Serializable]
@@ -37,10 +38,11 @@ public class RemoteController: MonoBehaviour
     }
 
     [Inject]
-    void Construct(Settings settings, CommandController commandController)
+    void Construct(Settings settings, CommandController commandController, SecretService secretService)
     {
         _settings = settings;
         _commandController = commandController;
+        _secretService = secretService;
     }
 
     public void StartPolling()
@@ -72,6 +74,7 @@ public class RemoteController: MonoBehaviour
     IEnumerator GetTextFromEndpoint(string endpoint, WebRequestResult result)
     {
         UnityWebRequest www = UnityWebRequest.Get(endpoint);
+        www.SetRequestHeader("Authorization", _secretService.getAccessToken());
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)

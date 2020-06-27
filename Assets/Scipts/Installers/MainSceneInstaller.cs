@@ -30,5 +30,7 @@ public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>
 
         Container.BindFactory<RawCommand, BaseCommand, BaseCommand.Factory>().FromFactory<CommandFactory>();
         Container.BindInterfacesAndSelfTo<CommandController>().AsSingle();
+        
+        Container.BindInterfacesAndSelfTo<SecretService>().AsSingle();
     }
 }

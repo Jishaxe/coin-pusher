@@ -81,12 +81,13 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            QueueCoin();
+            QueueDonation("Test Donation", "Test Message", 5.55f);
         }
     }
 
-    public void QueueCoin()
+    public void QueueDonation(string name, string message, float amount)
     {
+        Debug.Log($"Queuing donation, name: {name}, message: {message}, amount: {amount}");
         var coin = CreateCoin();
         coin.transform.position = GetCoinDropPosition();
     }

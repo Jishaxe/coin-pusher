@@ -44,8 +44,8 @@ public class CommandStructureWindow : EditorWindow
 
         commands.Add(new RawCommandAndTypeCollection()
         {
-            commandData = new QueueCoinCommand.Data(),
-            type = CommandType.QUEUE_COIN
+            commandData = new QueueDonationCommand.Data(),
+            type = CommandType.QUEUE_DONATION
         });
         
         commands.Add(new RawCommandAndTypeCollection()

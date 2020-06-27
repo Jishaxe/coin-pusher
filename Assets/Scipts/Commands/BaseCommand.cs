@@ -8,7 +8,7 @@ using Zenject;
 public enum CommandType
 {
     NONE,
-    QUEUE_COIN,
+    QUEUE_DONATION,
     CLEAR_BOARD
 }
 
@@ -43,8 +43,8 @@ public class CommandFactory : IFactory<RawCommand, BaseCommand>
         
         switch (type)
         {
-            case CommandType.QUEUE_COIN:
-                baseCommand = _container.Instantiate<QueueCoinCommand>();
+            case CommandType.QUEUE_DONATION:
+                baseCommand = _container.Instantiate<QueueDonationCommand>();
                 break;
             case CommandType.CLEAR_BOARD:
                 baseCommand = _container.Instantiate<ClearBoardCommand>();
@@ -76,8 +76,10 @@ public class BaseCommand
         protected set;
     }
     
-    protected ICommandData _data;
+    private ICommandData _data;
     protected CommandType _type;
+
+    private Type _dataType;
     
     public sealed class Factory : PlaceholderFactory<RawCommand, BaseCommand>
     {
@@ -116,11 +118,12 @@ public class BaseCommand
         return raw;
     }
 
-    protected void LoadCommandData<T>(string data) where T: ICommandData
+    protected T LoadCommandData<T>(string data) where T: ICommandData
     {
         _data = JsonConvert.DeserializeObject<T>(data);
+        return (T) this._data;
     }
-    
+
     public virtual void Invoke()
     {
         throw new NotImplementedException();

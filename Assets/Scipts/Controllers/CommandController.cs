@@ -23,6 +23,8 @@ public class CommandController: ITickable, ISaveLoadable<RawCommandController>
     
     public void AddRawCommands(List<RawCommand> rawCommands)
     {
+        if (!rawCommands.Any()) return;
+        
         var newCommands = new List<BaseCommand>();
 
         var deduplicatedCommands = _commandDeduplicator.RemoveDuplicates(rawCommands);
