@@ -91,7 +91,7 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            QueueDonation("Test Donation", "Test Message", 5.55f);
+            QueueDonation("Test Donation", "Test Message", 3.99f);
         }
     }
 

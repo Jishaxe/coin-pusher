@@ -44,7 +44,8 @@ public class PusherController : ITickable, ISaveLoadable<RawPusherControllerData
     
     private void MoveTo(Vector3 position)
     {
-        _rigidbody.MovePosition(position);
+        _gameObject.transform.localPosition = position;
+        _rigidbody.position = position;
     }
     
     public void Tick()
