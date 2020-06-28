@@ -8,6 +8,7 @@ public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>
     public CoinSpawnController.Settings CoinSpawnerSettings;
     public PusherController.Settings PusherSettings;
     public RemoteController.Settings RemoteSettings;
+    public LightbarEffectController.Settings LightbarEffectSettings;
     
     public override void InstallBindings()
     {
@@ -32,5 +33,8 @@ public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>
         Container.BindInterfacesAndSelfTo<CommandController>().AsSingle();
         
         Container.BindInterfacesAndSelfTo<SecretService>().AsSingle();
+        
+        Container.BindInstance(LightbarEffectSettings);
+        Container.BindInterfacesAndSelfTo<LightbarEffectController>().AsSingle();
     }
 }

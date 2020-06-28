@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Duller
+    second: {fileID: 2100000, guid: e6c173fbf6f69f5428c1d0c4e26593a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: LogoMaterial
     second: {fileID: 2100000, guid: a1f73330bb5df5542b6c69f8464a53b4, type: 2}
   - first:
@@ -29,6 +34,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: No Name
     second: {fileID: 2100000, guid: 8ec5e41baf0879c4a8151b29aca81fab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Poster
+    second: {fileID: 2100000, guid: 8e48053d16cf5044880205f4456b8a71, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
