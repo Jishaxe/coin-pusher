@@ -34,7 +34,7 @@ public class PusherController : ITickable, ISaveLoadable<RawPusherControllerData
 
     private Vector3 CalculatePosition(float pos)
     {
-        return Vector3.Lerp(_settings.retractedLocalPosition, _settings.extendedLocalPosition, pos);
+        return Vector3.LerpUnclamped(_settings.retractedLocalPosition, _settings.extendedLocalPosition, pos);
     }
 
     private float GetPositionForTime(float t)
@@ -44,8 +44,8 @@ public class PusherController : ITickable, ISaveLoadable<RawPusherControllerData
     
     private void MoveTo(Vector3 position)
     {
-        _gameObject.transform.localPosition = position;
-        _rigidbody.position = position;
+        //_gameObject.transform.localPosition = position;
+        _rigidbody.MovePosition(_gameObject.transform.parent.TransformPoint(position));
     }
     
     public void Tick()

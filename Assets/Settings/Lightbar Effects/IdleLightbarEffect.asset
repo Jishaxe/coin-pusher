@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616fa48c4932ce64d821fe5e6453b3d1, type: 3}
   m_Name: IdleLightbarEffect
   m_EditorClassIdentifier: 
-  tiling: {x: 5, y: 1}
+  tiling: {x: 1, y: 1}
   offset: {x: 0, y: 0}
   offsetSpeed: {x: 0.5, y: 0}
