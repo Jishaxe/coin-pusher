@@ -9,7 +9,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
 {
     public delegate Vector3 CoinSpawnPositionProvider();
     private const int k_populateBoardWaves = 20;
-    private const float k_populateBoardDelay = 0.5f;
+    private const float k_populateBoardDelay = 0;
     
     private Settings _settings;
     private Coin.Factory _coinFactory;

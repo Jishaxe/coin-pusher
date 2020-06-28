@@ -24,8 +24,18 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
     public static event Action<Coin> OnCoinCollected;
     
     private Rigidbody _rigidbody;
+    private Collider _collider;
 
     [SerializeField] private ParticleSystem _collectionPFX;
+
+    [Header("Sound")] [Space(30)] 
+    [SerializeField] private SoundClipContainer _coinDropSounds;
+    [SerializeField] private AudioSource _coinDropAudioSource;
+    [SerializeField] private float _coinDropSoundThreshold;
+    [SerializeField] private SoundClipContainer _coinCollectSounds;
+    [SerializeField] private AudioSource _coinCollectAudioSource;
+    
+    [Space(30)]
     
     public float value;
     private bool _isCollected = false;
@@ -39,6 +49,7 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
     public void Construct()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _collider = GetComponent<Collider>();
     }
 
     public void Destroy()
@@ -55,13 +66,25 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
         }
     }
 
+    public void OnCollisionEnter(Collision other)
+    {
+        var force = other.relativeVelocity.magnitude;
+        if (force > _coinDropSoundThreshold)
+        {
+            PlayCoinDropSound();
+        }
+    }
+
     private IEnumerator OnCollected()
     {
         _isCollected = true;
         
         OnCoinCollected?.Invoke(this);
 
+        PlayCoinCollectSound();
+        
         _rigidbody.isKinematic = true;
+        _collider.enabled = false;
 
         yield return StartCoroutine(PlayCollectionPFX());
         
@@ -99,6 +122,18 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
         _rigidbody.velocity = data.velocity;
         _rigidbody.angularVelocity = data.angularVelocity;
         _rigidbody.WakeUp();
+    }
+
+    private void PlayCoinDropSound()
+    {
+        var sound = _coinDropSounds.GetRandomClip();
+        _coinDropAudioSource.PlayOneShot(sound);
+    }
+
+    private void PlayCoinCollectSound()
+    {
+        var sound = _coinCollectSounds.GetRandomClip();
+        _coinCollectAudioSource.PlayOneShot(sound);
     }
 }
 
