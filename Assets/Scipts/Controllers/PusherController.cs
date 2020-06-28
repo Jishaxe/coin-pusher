@@ -12,6 +12,8 @@ public class PusherController : ITickable, ISaveLoadable<RawPusherControllerData
 
     private float _position;
     private float _elapsed;
+
+    public float SpeedFactor;
     
     [Serializable]
     public sealed class Settings
@@ -27,9 +29,9 @@ public class PusherController : ITickable, ISaveLoadable<RawPusherControllerData
     public PusherController(Settings settings)
     {
         _settings = settings;
-
         _gameObject = settings.gameObject;
         _rigidbody = _gameObject.GetComponent<Rigidbody>();
+        SpeedFactor = 1f;
     }
 
     private Vector3 CalculatePosition(float pos)

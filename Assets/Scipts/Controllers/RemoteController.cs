@@ -67,7 +67,7 @@ public class RemoteController: MonoBehaviour
             {
                 Debug.Log("Poll coroutine still running, skipping...");
             }
-            yield return new WaitForSeconds(_settings.pollTime);
+            yield return new WaitForSeconds(_settings.pollTime / Time.timeScale);
         }
     }
 

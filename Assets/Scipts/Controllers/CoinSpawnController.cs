@@ -1,18 +1,33 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Zenject;
 
-public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControllerData>
+public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnControllerData>
 {
-    private readonly Settings _settings;
-    private readonly Coin.Factory _coinFactory;
-    private readonly BoardController _boardController;
+    public delegate Vector3 CoinSpawnPositionProvider();
+    private const int k_populateBoardWaves = 20;
+    private const float k_populateBoardDelay = 0.5f;
+    
+    private Settings _settings;
+    private Coin.Factory _coinFactory;
+    private BoardController _boardController;
+    private PusherController _pusherController;
 
     private List<Coin> _coins = new List<Coin>();
-
     private List<Coin> _coinPrefabsSortedByValue = new List<Coin>();
+
+    private bool _isPopulating = false;
+    
+    public float ValueOnBoard
+    {
+        get
+        {
+            return _coins.Sum(coin => coin.value);
+        }
+    }
     
     [Serializable]
     public sealed class Settings
@@ -24,41 +39,47 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
     }
 
     [Inject]
-    public CoinSpawnController(Settings settings, Coin.Factory coinFactory, BoardController boardController)
+    public void Construct(Settings settings, Coin.Factory coinFactory, BoardController boardController, PusherController pusherController)
     {
         _settings = settings;
         _coinFactory = coinFactory;
         _boardController = boardController;
-        
+        _pusherController = pusherController;
         ProcessCoinPrefabs();
+
+        Coin.OnCoinCollected += OnCoinCollected;
     }
 
+    private void OnCoinCollected(Coin coin)
+    {
+        _coins.Remove(coin);
+    }
+    
     private void ProcessCoinPrefabs()
     {
         _coinPrefabsSortedByValue = _settings.coinPrefabs.OrderByDescending(coin => coin.value).ToList();
         Debug.Assert(!_coinPrefabsSortedByValue.Any((coin) => coin.value == 0), "Coin has zero value");
     }
 
-    public void PopulateBoard()
+    public void PopulateBoard(float value)
     {
-        var bounds = _boardController.CoinSpawnArea.bounds;
+        if (_isPopulating) return;
+        _isPopulating = true;
 
-        float increment = _settings.distanceBetweenCoins + (_settings.coinRadius * 2);
-        
-        for (float x = bounds.min.x; x < bounds.max.x; x += increment)
+        StartCoroutine(PopulateBoardCoroutine(value));
+    }
+
+    private IEnumerator PopulateBoardCoroutine(float value)
+    {
+        float valuePerWave = value / k_populateBoardWaves;
+        for (int i = 0; i < k_populateBoardWaves; i++)
         {
-            for (float z = bounds.min.z; z < bounds.max.z; z += increment)
-            {
-                var hitColliders = Physics.OverlapCapsule(new Vector3(x, bounds.min.y, z),
-                    new Vector3(x, bounds.max.y, z), _settings.coinRadius, Physics.AllLayers, QueryTriggerInteraction.Collide);
-
-                // if this coin will hit the funnel, then ignore
-                if (hitColliders.Contains(_boardController.FunnelCollider)) continue;
-
-                //var coin = CreateCoin();
-               // coin.transform.position = new Vector3(x, bounds.center.y, z);
-            }
+            QueueDonation("Backlog", "", valuePerWave, _boardController.GetRandomPopulationPosition);
+            yield return new WaitForSeconds(k_populateBoardDelay);
         }
+        
+        _isPopulating = false;
+        Debug.Log("Populuated, value on board: " + ValueOnBoard);
     }
 
     public void ClearBoard()
@@ -71,14 +92,6 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
         _coins.Clear();
     }
 
-    private Coin CreateCoin(Coin coinDef)
-    {
-        var coin = _coinFactory.Create(coinDef);
-        _coins.Add(coin);
-        
-        return coin;
-    }
-
     private Vector3 GetCoinDropPosition()
     {
         Vector3 offset = Vector3.Lerp(-_settings.randomCoinDropOffsetFromCenter,
@@ -87,7 +100,7 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
         return _boardController.CoinSpawnPosition + offset;
     }
 
-    public void Tick()
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -95,7 +108,7 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
         }
     }
 
-    public void QueueDonation(string name, string message, float amount)
+    public void QueueDonation(string name, string message, float amount, CoinSpawnPositionProvider positionProvider)
     {
         Debug.Log($"Queuing donation, name: {name}, message: {message}, amount: {amount}");
         var coins = BreakDownBalanceIntoCoins(amount);
@@ -103,9 +116,14 @@ public class CoinSpawnController: ITickable, ISaveLoadable<RawCoinSpawnControlle
         foreach (Coin coin in coins)
         {
             var newCoin = _coinFactory.Create(coin);
-            newCoin.transform.position = GetCoinDropPosition();
+            newCoin.transform.position = positionProvider();
+            _coins.Add(newCoin);
         }
-       
+    }
+
+    public void QueueDonation(string name, string message, float amount)
+    {
+        QueueDonation(name, message, amount, GetCoinDropPosition);
     }
     
     private List<Coin> BreakDownBalanceIntoCoins(float amount)

@@ -1,10 +1,8 @@
 {
-  "CoinSpawnController": {
-    "coins": []
-  },
+  "CoinSpawnController": null,
   "PusherController": {
     "position": 0.0,
-    "elapsed": 0.5929056
+    "elapsed": 1.90325856
   },
   "CommandController": {
     "commands": [],

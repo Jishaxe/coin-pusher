@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
@@ -20,9 +21,14 @@ public class CoinFactory : IFactory<Coin, Coin>
 
 public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
 {
+    public static event Action<Coin> OnCoinCollected;
+    
     private Rigidbody _rigidbody;
 
+    [SerializeField] private ParticleSystem _collectionPFX;
+    
     public float value;
+    private bool _isCollected = false;
     
     public class Factory : PlaceholderFactory<Coin, Coin>
     {
@@ -38,6 +44,40 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
     public void Destroy()
     {
         Destroy(gameObject);
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("CoinCatcher"))
+        {
+            if (_isCollected) return;
+            StartCoroutine(OnCollected());
+        }
+    }
+
+    private IEnumerator OnCollected()
+    {
+        _isCollected = true;
+        
+        OnCoinCollected?.Invoke(this);
+
+        _rigidbody.isKinematic = true;
+
+        yield return StartCoroutine(PlayCollectionPFX());
+        
+        Destroy(gameObject);
+    }
+
+    IEnumerator PlayCollectionPFX()
+    {
+        _collectionPFX.gameObject.SetActive(true);
+        var trns = _collectionPFX.transform;
+        
+        trns.SetParent(null);
+        trns.up = Vector3.up;
+        _collectionPFX.Play();
+        
+        yield return new WaitUntil(() => _collectionPFX.isStopped);
     }
 
     public RawCoinData Save()

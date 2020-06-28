@@ -23,6 +23,8 @@ public class MainSceneController: IInitializable, ITickable
         _saveGameService.LoadGame();
         _remoteController.StartPolling();
         
+        _coinSpawnController.PopulateBoard(9.99f);
+        
         Application.quitting += Shutdown;
     }
 
@@ -32,7 +34,7 @@ public class MainSceneController: IInitializable, ITickable
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             _coinSpawnController.ClearBoard();
-            _coinSpawnController.PopulateBoard();
+            _coinSpawnController.PopulateBoard(53.55f);
         }
 
         if (Input.GetKeyDown(KeyCode.Return))
