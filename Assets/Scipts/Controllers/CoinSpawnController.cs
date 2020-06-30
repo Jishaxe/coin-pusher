@@ -36,6 +36,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         public Vector3 randomCoinDropOffsetFromCenter;
         public float distanceBetweenCoins;
         public float coinRadius;
+        public bool populateOnStart;
     }
 
     [Inject]

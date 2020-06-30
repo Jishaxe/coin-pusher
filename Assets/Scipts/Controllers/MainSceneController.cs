@@ -23,7 +23,7 @@ public class MainSceneController: IInitializable, ITickable
         _saveGameService.LoadGame();
         _remoteController.StartPolling();
         
-        _coinSpawnController.PopulateBoard(9.99f);
+        //_coinSpawnController.PopulateBoard(9.99f);
         
         Application.quitting += Shutdown;
     }
