@@ -1,9 +1,12 @@
 ﻿using UnityEngine.Serialization;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.tvOS;
 using Zenject;
 
 public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>
 {
+    public UIController UIController;
+    public LocalizationService.Settings LocalizationSettings;
     public BoardController.Settings BoardSettings;
     public CoinSpawnController.Settings CoinSpawnerSettings;
     public PusherController.Settings PusherSettings;
@@ -12,7 +15,11 @@ public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>
     
     public override void InstallBindings()
     {
+        Container.BindInstance(UIController);
         Container.BindInterfacesAndSelfTo<MainSceneController>().AsSingle();
+
+        Container.BindInstance(LocalizationSettings);
+        Container.BindInterfacesAndSelfTo<LocalizationService>().AsSingle();
         
         Container.BindInstance(CoinSpawnerSettings);
         Container.BindInterfacesAndSelfTo<CoinSpawnController>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
