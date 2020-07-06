@@ -3,12 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Zenject;
 
-public sealed class RawCommands
-{
-    public List<RawCommand> commands = new List<RawCommand>();
-}
-
-public class CommandController: ITickable, ISaveLoadable<RawCommandController>
+public class CommandController: ISaveLoadable<RawCommandController>
 {
     private List<BaseCommand> _commands = new List<BaseCommand>();
     private BaseCommand.Factory _commandFactory;
@@ -37,11 +32,7 @@ public class CommandController: ITickable, ISaveLoadable<RawCommandController>
         _commands.AddRange(newCommands);
         
         SortCommandsByTime();
-    }
-
-    public void AddRawCommands(RawCommands rawCommands)
-    {
-        AddRawCommands(rawCommands.commands);
+        ProcessCommands();
     }
 
     private void SortCommandsByTime()
@@ -69,9 +60,10 @@ public class CommandController: ITickable, ISaveLoadable<RawCommandController>
     {
         AddRawCommands(data.commands);
         _commandDeduplicator.Load(data.RawCommandDeduplicator);
+        ProcessCommands();
     }
 
-    public void Tick()
+    void ProcessCommands()
     {
         if (_commands.Any())
         {

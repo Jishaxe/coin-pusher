@@ -22,17 +22,16 @@ public class CommandStructureWindow : EditorWindow
         window.Show();
     }
 
-    RawCommands MockRawCommands()
+    List<RawCommand> MockRawCommands()
     {
-        var mocks = new RawCommands();
-        mocks.commands = new List<RawCommand>();
+        var mocks = new List<RawCommand>();
         
         foreach (var commandAndTypeCollection in CreateMockCommandDatas())
         {
             var rawCommand = new RawCommand();
             rawCommand.data = JsonConvert.SerializeObject(commandAndTypeCollection.commandData);
             rawCommand.type = commandAndTypeCollection.type.ToString();
-            mocks.commands.Add(rawCommand);
+            mocks.Add(rawCommand);
         }
 
         return mocks;

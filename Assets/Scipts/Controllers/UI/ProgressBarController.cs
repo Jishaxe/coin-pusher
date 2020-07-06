@@ -55,6 +55,7 @@ public class ProgressBarController : MonoBehaviour
         {
             StopCoroutine(_progressBarAnimationCoroutine);
             _progressBarAnimationCoroutine = null;
+            _fireController.isFlaming = false;
         }
 
         _targetValue = value;

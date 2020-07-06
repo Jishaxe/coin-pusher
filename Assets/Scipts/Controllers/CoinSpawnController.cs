@@ -15,6 +15,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
     private Coin.Factory _coinFactory;
     private BoardController _boardController;
     private PusherController _pusherController;
+    private CampaignModel _campaignModel;
 
     private List<Coin> _coins = new List<Coin>();
     private List<Coin> _coinPrefabsSortedByValue = new List<Coin>();
@@ -40,12 +41,13 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
     }
 
     [Inject]
-    public void Construct(Settings settings, Coin.Factory coinFactory, BoardController boardController, PusherController pusherController)
+    public void Construct(Settings settings, Coin.Factory coinFactory, BoardController boardController, PusherController pusherController, CampaignModel campaignModel)
     {
         _settings = settings;
         _coinFactory = coinFactory;
         _boardController = boardController;
         _pusherController = pusherController;
+        _campaignModel = campaignModel;
         ProcessCoinPrefabs();
 
         Coin.OnCoinCollected += OnCoinCollected;
@@ -54,6 +56,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
     private void OnCoinCollected(Coin coin)
     {
         _coins.Remove(coin);
+        _campaignModel.Update();
     }
     
     private void ProcessCoinPrefabs()
@@ -91,6 +94,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         }
         
         _coins.Clear();
+        _campaignModel.Update();
     }
 
     private Vector3 GetCoinDropPosition()

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -34,6 +35,8 @@ public class MoneyUIElementController : MonoBehaviour
     {
         _text = GetComponent<Text>();
         _animator = GetComponent<Animator>();
+        
+        SetText(_currentValue, true);
     }
 
     public void SetMoney(float money, bool skipAnimation = false)
@@ -71,7 +74,7 @@ public class MoneyUIElementController : MonoBehaviour
         }
         else
         {
-            SetText(_targetValue);
+            SetText(_targetValue, true);
         }
     }
 
@@ -96,15 +99,34 @@ public class MoneyUIElementController : MonoBehaviour
             yield return null;
         }
 
-        SetText(end);
+        SetText(end, true);
 
         OnComplete?.Invoke();
     }
 
-    private void SetText(float value)
+    private void SetText(float value, bool removeTrailingZeroes = false)
     {
         _currentValue = value;
-        _text.text = _localizationService.LocalizeMoney(value);
+        
+        var text = _localizationService.LocalizeMoney(value);
+        if (removeTrailingZeroes) text = StripTrailingZeroes(text);
+
+        _text.text = text;
+
+    }
+    
+    public string StripTrailingZeroes(string temp)
+    {
+        var split = temp.Split('.');
+        if (split.Length > 1)
+        {
+            if (split[1].All(n => n == '0')) return split[0];
+            else return temp;
+        }
+        else
+        {
+            return temp;
+        }
     }
     
     void SetTrigger(int trigger)

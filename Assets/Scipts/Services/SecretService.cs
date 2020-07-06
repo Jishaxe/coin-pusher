@@ -21,7 +21,7 @@ public class SecretService
         LoadSecrets();
     }
 
-    public string getAccessToken()
+    public string GetAccessToken()
     {
         return _secrets.accessToken;
     }

@@ -6,6 +6,12 @@ using UnityEngine;
 using UnityEngine.Networking;
 using Zenject;
 
+public class RawCampaignAndCommandData
+{
+    public RawCampaignModel Campaign;
+    public List<RawCommand> Commands;
+}
+
 public class RemoteController: MonoBehaviour
 {
     public class WebRequestResult
@@ -28,7 +34,10 @@ public class RemoteController: MonoBehaviour
     
     private Settings _settings;
     private SecretService _secretService;
+    private CampaignModel _campaignModel;
+    private CoinSpawnController _coinSpawnController;
     private CommandController _commandController;
+    private bool _firstPoll;
     
     [Serializable]
     public sealed class Settings
@@ -38,11 +47,13 @@ public class RemoteController: MonoBehaviour
     }
 
     [Inject]
-    void Construct(Settings settings, CommandController commandController, SecretService secretService)
+    void Construct(Settings settings, CommandController commandController, SecretService secretService, CampaignModel campaignModel, CoinSpawnController coinSpawnController)
     {
         _settings = settings;
         _commandController = commandController;
         _secretService = secretService;
+        _campaignModel = campaignModel;
+        _coinSpawnController = coinSpawnController;
     }
 
     public void StartPolling()
@@ -52,6 +63,7 @@ public class RemoteController: MonoBehaviour
             throw new ArgumentException("Polling coroutine is already running!");
         }
 
+        _firstPoll = true;
         _pollingLoopCoroutine = StartCoroutine(PollingCoroutine());
     }
 
@@ -74,7 +86,7 @@ public class RemoteController: MonoBehaviour
     IEnumerator GetTextFromEndpoint(string endpoint, WebRequestResult result)
     {
         UnityWebRequest www = UnityWebRequest.Get(endpoint);
-        www.SetRequestHeader("Authorization", _secretService.getAccessToken());
+        www.SetRequestHeader("Authorization", _secretService.GetAccessToken());
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)
@@ -98,15 +110,32 @@ public class RemoteController: MonoBehaviour
             yield break;
         }
 
-        _commandController.AddRawCommands(ParseCommands(result.text));
+        ProcessRawData(result.text);
         
         _pollCoroutine = null;
     }
 
-    private RawCommands ParseCommands(string json)
+    private void ProcessRawData(string json)
     {
-        var rawCommands = JsonConvert.DeserializeObject<RawCommands>(json);
-        return rawCommands;
+        var rawData = ParseCampaignAndCommandsData(json);
+
+        _commandController.AddRawCommands(rawData.Commands);
+        
+        _campaignModel.Load(rawData.Campaign);
+
+        if (_firstPoll)
+        {
+            _coinSpawnController.PopulateBoard(Mathf.Min(_campaignModel.TotalRaised, 9.99f));
+            _firstPoll = false;
+        }
+        
+        _campaignModel.Update();
+    }
+
+    public RawCampaignAndCommandData ParseCampaignAndCommandsData(string json)
+    {
+        var data = JsonConvert.DeserializeObject<RawCampaignAndCommandData>(json);
+        return data;
     }
 
     public void StopPolling()

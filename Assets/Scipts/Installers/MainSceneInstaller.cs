@@ -15,6 +15,8 @@ public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>
     
     public override void InstallBindings()
     {
+        Container.BindInterfacesAndSelfTo<CampaignModel>().AsSingle();
+        
         Container.BindInstance(UIController);
         Container.BindInterfacesAndSelfTo<MainSceneController>().AsSingle();
 
