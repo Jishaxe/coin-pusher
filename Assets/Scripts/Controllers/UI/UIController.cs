@@ -23,7 +23,7 @@ public class UIController : MonoBehaviour
 
     void OnCampaignModelUpdated()
     {
-        _causeInfoController.SetCauseInfo("", _campaignModel.CauseName);
+        _causeInfoController.SetCauseInfo(_campaignModel.CauseProfileURL, _campaignModel.CauseName);
         _startEndTimeController.SetDates(_campaignModel.StartDate, _campaignModel.EndDate);
         _goalAmountController.SetMoney(_campaignModel.Goal, true);
 

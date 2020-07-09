@@ -1,4 +1,5 @@
-﻿using UnityEngine.Serialization;
+﻿using Services;
+using UnityEngine.Serialization;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.tvOS;
 using Zenject;
@@ -45,5 +46,7 @@ public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>
         
         Container.BindInstance(LightbarEffectSettings);
         Container.BindInterfacesAndSelfTo<LightbarEffectController>().AsSingle();
+        
+        Container.BindInterfacesAndSelfTo<ImageProvisionService>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
     }
 }
