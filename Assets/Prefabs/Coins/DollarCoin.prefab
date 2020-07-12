@@ -77,8 +77,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dollar
       objectReference: {fileID: 0}
+    - target: {fileID: 4063835366044962077, guid: 4cd67c82ef42bc14198a968ebe17286a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb40a4297b1df0044a912793dbabc490, type: 2}
+    - target: {fileID: 4063835366044962077, guid: 4cd67c82ef42bc14198a968ebe17286a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb40a4297b1df0044a912793dbabc490, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cd67c82ef42bc14198a968ebe17286a, type: 3}
+--- !u!23 &5343015220870752463 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4063835366044962077, guid: 4cd67c82ef42bc14198a968ebe17286a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8233583642627417554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8742722213148364630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97,7 +113,7 @@ PrefabInstance:
     - target: {fileID: 42276870085680363, guid: 8b334cce30b1ca440938f13284fad425,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000014569
+      value: 0.072999954
       objectReference: {fileID: 0}
     - target: {fileID: 42276870085680363, guid: 8b334cce30b1ca440938f13284fad425,
         type: 3}
@@ -214,6 +230,16 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.g
       value: 0.7647059
       objectReference: {fileID: 0}
+    - target: {fileID: 3009549660315644360, guid: 8b334cce30b1ca440938f13284fad425,
+        type: 3}
+      propertyPath: _renderer
+      value: 
+      objectReference: {fileID: 5343015220870752463}
+    - target: {fileID: 3009549660315644360, guid: 8b334cce30b1ca440938f13284fad425,
+        type: 3}
+      propertyPath: _markedMaterialSlot
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3948930431834582776, guid: 8b334cce30b1ca440938f13284fad425,
         type: 3}
       propertyPath: m_Name
@@ -229,6 +255,11 @@ PrefabInstance:
       propertyPath: value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7663891262277537541, guid: 8b334cce30b1ca440938f13284fad425,
+        type: 3}
+      propertyPath: _renderer
+      value: 
+      objectReference: {fileID: 5343015220870752463}
     - target: {fileID: 8797786806985432132, guid: 8b334cce30b1ca440938f13284fad425,
         type: 3}
       propertyPath: m_LocalScale.z

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Services;
 using UnityEngine;
 using Zenject;
 
@@ -34,19 +35,17 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
     [SerializeField] private float _coinDropSoundThreshold;
     [SerializeField] private SoundClipContainer _coinCollectSounds;
     [SerializeField] private AudioSource _coinCollectAudioSource;
-    
     [Space(30)]
     
     public float value;
     private bool _isCollected = false;
-    
+
     public class Factory : PlaceholderFactory<Coin, Coin>
     {
         
     }
-    
-    [Inject]
-    public void Construct()
+
+    void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _collider = GetComponent<Collider>();

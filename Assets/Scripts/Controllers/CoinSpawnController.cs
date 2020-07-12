@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Zenject;
+using Random = System.Random;
 
 public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnControllerData>
 {
@@ -121,9 +122,33 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         foreach (Coin coin in coins)
         {
             var newCoin = _coinFactory.Create(coin);
+            newCoin.GetComponent<CoinMarkingComponent>().ApplyMarking(GetRandomTestinURL());
             newCoin.transform.position = positionProvider();
             _coins.Add(newCoin);
         }
+    }
+
+    private string GetRandomTestinURL()
+    {
+        string[] urls =
+        {
+            "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg"
+            /*
+            "https://cdn.discordapp.com/avatars/368576468093239296/8772431a9e7919ee1f54fc165db78f6d.png?size=128",
+            "https://cdn.discordapp.com/avatars/295009627538718722/1ba079588b0443850b152acb27547768.png?size=128",
+            "https://cdn.discordapp.com/avatars/295970689335296000/0e644b61b01b50fff39c131b92c2f05c.png?size=128",
+            "https://cdn.discordapp.com/avatars/489281810061066250/632956c86b41494093d35966d406b2b0.png?size=128",
+            "https://cdn.discordapp.com/avatars/129300349927424001/782a4948ff7e5e2e984d1b224d125640.png?size=128",
+            "https://cdn.discordapp.com/avatars/178464497336320000/218d140830b65726e91968e92540cb69.png?size=128",
+            "https://cdn.discordapp.com/avatars/328123626174021634/b2c7466676198ee9d0ccda3e8582ade0.png?size=128",
+            "https://cdn.discordapp.com/avatars/216145046347448320/35036ca3017da2d6ca5e4975db1f1015.png?size=128"*/
+            
+            
+            
+            
+        };
+
+        return urls[UnityEngine.Random.Range(0, urls.Length)];
     }
 
     public void QueueDonation(string name, string message, float amount)

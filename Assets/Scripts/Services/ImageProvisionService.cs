@@ -6,19 +6,61 @@ using UnityEngine.Networking;
 
 namespace Services
 {
+    public sealed class ImageResolution
+    {
+        private bool _resolved;
+        private Texture2D _result;
+        private List<Action<Texture2D>> _callbacks = new List<Action<Texture2D>>();
+
+        public void OnResolved(Texture2D resolved)
+        {
+            _resolved = true;
+            _result = resolved;
+            CheckForResolution();
+        }
+        
+        public void AddCallback(Action<Texture2D> callback)
+        {
+            _callbacks.Add(callback);
+            CheckForResolution();
+        }
+
+        private void CheckForResolution()
+        {
+            if (_resolved)
+            {
+                foreach (var callback in _callbacks)
+                {
+                    callback.Invoke(_result);
+                }
+
+                _callbacks.Clear();
+            }
+        }
+    }
+    
     public class ImageProvisionService : MonoBehaviour
     {
-        private Dictionary<string, Texture2D> _cachedImages = new Dictionary<string, Texture2D>();
+        private Dictionary<string, ImageResolution> _resolutions = new Dictionary<string, ImageResolution>();
 
         public void ResolveImage(string url, Action<Texture2D> OnComplete)
         {
-            if (_cachedImages.TryGetValue(url, out var texture))
+            if (String.IsNullOrEmpty(url))
             {
-                OnComplete.Invoke(texture);
+                OnComplete?.Invoke(null);
+                return;
+            }
+            
+            if (_resolutions.TryGetValue(url, out var resolution))
+            {
+                resolution.AddCallback(OnComplete);
             }
             else
             {
-                StartCoroutine(GetTexture(url, OnComplete));
+                var res = new ImageResolution();
+                res.AddCallback(OnComplete);
+                StartCoroutine(GetTexture(url, res.OnResolved));
+                _resolutions[url] = res;
             }
         }
         
@@ -34,7 +76,6 @@ namespace Services
             else 
             {
                 var tex = ((DownloadHandlerTexture)www.downloadHandler).texture;
-                _cachedImages[url] = tex;
                 OnComplete.Invoke(tex);
             }
         }

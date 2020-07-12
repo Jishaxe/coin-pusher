@@ -48,5 +48,7 @@ public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>
         Container.BindInterfacesAndSelfTo<LightbarEffectController>().AsSingle();
         
         Container.BindInterfacesAndSelfTo<ImageProvisionService>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
+
+        Container.BindInterfacesAndSelfTo<CoinMarkingService>().AsSingle();
     }
 }

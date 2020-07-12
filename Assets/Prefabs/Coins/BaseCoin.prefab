@@ -9268,6 +9268,7 @@ GameObject:
   - component: {fileID: 3382692888539879972}
   - component: {fileID: 3198792265768527388}
   - component: {fileID: 7663891262277537541}
+  - component: {fileID: 3009549660315644360}
   - component: {fileID: 8217403179299031676}
   m_Layer: 0
   m_Name: BaseCoin
@@ -9373,7 +9374,20 @@ MonoBehaviour:
   _coinDropSoundThreshold: 1.5
   _coinCollectSounds: {fileID: 4850640979704207568}
   _coinCollectAudioSource: {fileID: 2427177729759340334}
+  _renderer: {fileID: 0}
   value: 0
+--- !u!114 &3009549660315644360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3948930431834582776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f39ab75fb726a40952ef7831a33f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &8217403179299031676
 Rigidbody:
   m_ObjectHideFlags: 0

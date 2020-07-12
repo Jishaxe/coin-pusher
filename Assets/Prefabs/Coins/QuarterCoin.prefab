@@ -22,7 +22,7 @@ PrefabInstance:
     - target: {fileID: 42276870085680363, guid: 8b334cce30b1ca440938f13284fad425,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000014569
+      value: 0.072999954
       objectReference: {fileID: 0}
     - target: {fileID: 42276870085680363, guid: 8b334cce30b1ca440938f13284fad425,
         type: 3}
@@ -154,6 +154,16 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3009549660315644360, guid: 8b334cce30b1ca440938f13284fad425,
+        type: 3}
+      propertyPath: _renderer
+      value: 
+      objectReference: {fileID: 5387867770395409276}
+    - target: {fileID: 3009549660315644360, guid: 8b334cce30b1ca440938f13284fad425,
+        type: 3}
+      propertyPath: _markedMaterialSlot
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3948930431834582776, guid: 8b334cce30b1ca440938f13284fad425,
         type: 3}
       propertyPath: m_Name
@@ -169,6 +179,11 @@ PrefabInstance:
       propertyPath: value
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 7663891262277537541, guid: 8b334cce30b1ca440938f13284fad425,
+        type: 3}
+      propertyPath: _renderer
+      value: 
+      objectReference: {fileID: 5387867770395409276}
     - target: {fileID: 8797786806985432132, guid: 8b334cce30b1ca440938f13284fad425,
         type: 3}
       propertyPath: m_LocalScale.z
@@ -259,5 +274,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quarter
       objectReference: {fileID: 0}
+    - target: {fileID: 4063835366044962077, guid: 26bb9dc85b1d5e145aaf77b7a60e4d3e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 246fe791ac1174f459aae1ee5c2a2f42, type: 2}
+    - target: {fileID: 4063835366044962077, guid: 26bb9dc85b1d5e145aaf77b7a60e4d3e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 246fe791ac1174f459aae1ee5c2a2f42, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26bb9dc85b1d5e145aaf77b7a60e4d3e, type: 3}
+--- !u!23 &5387867770395409276 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4063835366044962077, guid: 26bb9dc85b1d5e145aaf77b7a60e4d3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8259647394077357665}
+  m_PrefabAsset: {fileID: 0}
