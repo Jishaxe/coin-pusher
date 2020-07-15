@@ -13,6 +13,7 @@ public class QueueDonationCommand : BaseCommand
     {
         public string name;
         public string message;
+        public string profileURL;
         public float amount;
     }
 
@@ -30,6 +31,6 @@ public class QueueDonationCommand : BaseCommand
 
     public override void Invoke()
     {
-        _coinSpawnController.QueueDonation(_data.name, _data.message, _data.amount);
+        _coinSpawnController.QueueDonation(_data.name, _data.message, _data.profileURL, _data.amount);
     }
 }

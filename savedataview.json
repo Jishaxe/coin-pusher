@@ -2,19 +2,37 @@
   "CoinSpawnController": null,
   "PusherController": {
     "position": 0.0,
-    "elapsed": 2.704571
+    "elapsed": 2.120061
   },
   "CommandController": {
-    "commands": [],
+    "commands": [
+      {
+        "type": "QUEUE_DONATION",
+        "id": "a8a0b1ab-c1b8-4c50-bf2e-59e2b2c555ad",
+        "time": "2020-07-15T20:39:09.762Z",
+        "data": "{\"name\":\"HermanLi\",\"message\":\"Hello!\",\"profileURL\":\"\",\"amount\":5.32}"
+      },
+      {
+        "type": "QUEUE_DONATION",
+        "id": "b8cdc4e4-5c37-4258-9a75-032cc9ada9c7",
+        "time": "2020-07-15T20:39:49.609Z",
+        "data": "{\"name\":\"HermanLi\",\"message\":\"Hello!\",\"profileURL\":\"https://static-cdn.jtvnw.net/jtv_user_pictures/29429ba5-354f-458f-a824-61704832f50e-profile_image-300x300.png\",\"amount\":5.32}"
+      },
+      {
+        "type": "QUEUE_DONATION",
+        "id": "81836f55-d1d6-48fb-9afa-cbab8216dc19",
+        "time": "2020-07-15T20:40:31.632Z",
+        "data": "{\"name\":\"HermanLi\",\"message\":\"Hello!\",\"profileURL\":\"https://static-cdn.jtvnw.net/jtv_user_pictures/29429ba5-354f-458f-a824-61704832f50e-profile_image-300x300.png\",\"amount\":5.32}"
+      },
+      {
+        "type": "QUEUE_DONATION",
+        "id": "8411a84f-292c-4e78-a5fe-1dd5683b55df",
+        "time": "2020-07-15T20:40:39.246Z",
+        "data": "{\"name\":\"HermanLi\",\"message\":\"Hello!\",\"profileURL\":\"https://static-cdn.jtvnw.net/jtv_user_pictures/29429ba5-354f-458f-a824-61704832f50e-profile_image-300x300.png\",\"amount\":5.32}"
+      }
+    ],
     "RawCommandDeduplicator": {
       "idHistory": [
-        "983c4149-d3ca-444c-b938-3a17e4fdae1a",
-        "16433171-b18f-477d-9cd5-bfc4c3b5035d",
-        "9d187db7-c48d-4e1e-8e45-41722da98421",
-        "65d69f42-2166-4def-9df2-50348e90f03b",
-        "9ed7dd35-1200-49dd-a4b5-33e642b0b855",
-        "430c3125-7010-48d5-9836-87de39fc1c2e",
-        "899a4dea-9b63-4767-a7da-b20c7d4a606f",
         "6986c97c-4024-434f-8973-e92933c81178",
         "920d3a71-3684-4f08-940c-982d43c58340",
         "8510c745-2e85-47a1-8e2c-614d00d3bad5",
@@ -107,7 +125,14 @@
         "44882e82-36af-4ab0-adb2-8a31569690b4",
         "c1e72121-3ca5-49b7-b933-ce299afc9d13",
         "2f90991a-e1fd-4f2f-b711-f4b0839824b6",
-        "6639ac34-cefc-4971-917b-1da41e3c37de"
+        "6639ac34-cefc-4971-917b-1da41e3c37de",
+        "d4afa12e-cea6-4417-80ef-e8f1b5b3f4aa",
+        "af2a4a85-a203-41a6-8b71-aaef8a8d76a7",
+        "7a59b5cb-1add-47f0-9b90-4bfb0d34e9ac",
+        "ae031061-dad3-4b45-86c7-37895874ddf2",
+        "183885d3-98ee-4c6c-a682-b8cf2fce845f",
+        "1ccf216d-5967-46ef-bab7-de1161724f35",
+        "e604dab4-f222-4782-9de1-5773911f1660"
       ]
     }
   }

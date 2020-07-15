@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
+using Zenject;
 
 namespace Services
 {
@@ -76,6 +78,8 @@ namespace Services
             else 
             {
                 var tex = ((DownloadHandlerTexture)www.downloadHandler).texture;
+                tex.name = url;
+                
                 OnComplete.Invoke(tex);
             }
         }

@@ -79,7 +79,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         float valuePerWave = value / k_populateBoardWaves;
         for (int i = 0; i < k_populateBoardWaves; i++)
         {
-            QueueDonation("Backlog", "", valuePerWave, _boardController.GetRandomPopulationPosition);
+            QueueDonation("Backlog", "", GetRandomTestinURL(), valuePerWave, _boardController.GetRandomPopulationPosition);
             yield return new WaitForSeconds(k_populateBoardDelay);
         }
         
@@ -110,11 +110,11 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            QueueDonation("Test Donation", "Test Message", 3.99f);
+            QueueDonation("Test Donation", "Test Message", GetRandomTestinURL(), 3.99f);
         }
     }
 
-    public void QueueDonation(string name, string message, float amount, CoinSpawnPositionProvider positionProvider)
+    public void QueueDonation(string name, string message, string profileURL, float amount, CoinSpawnPositionProvider positionProvider)
     {
         Debug.Log($"Queuing donation, name: {name}, message: {message}, amount: {amount}");
         var coins = BreakDownBalanceIntoCoins(amount);
@@ -122,7 +122,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         foreach (Coin coin in coins)
         {
             var newCoin = _coinFactory.Create(coin);
-            newCoin.GetComponent<CoinMarkingComponent>().ApplyMarking(GetRandomTestinURL());
+            newCoin.GetComponent<CoinMarkingComponent>().ApplyMarking(profileURL);
             newCoin.transform.position = positionProvider();
             _coins.Add(newCoin);
         }
@@ -151,9 +151,9 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         return urls[UnityEngine.Random.Range(0, urls.Length)];
     }
 
-    public void QueueDonation(string name, string message, float amount)
+    public void QueueDonation(string name, string message, string profileURL, float amount)
     {
-        QueueDonation(name, message, amount, GetCoinDropPosition);
+        QueueDonation(name, message, profileURL, amount, GetCoinDropPosition);
     }
     
     private List<Coin> BreakDownBalanceIntoCoins(float amount)
