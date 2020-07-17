@@ -2,18 +2,12 @@
   "CoinSpawnController": null,
   "PusherController": {
     "position": 0.0,
-    "elapsed": 3.1568737
+    "elapsed": 7.34629059
   },
   "CommandController": {
     "commands": [],
     "RawCommandDeduplicator": {
       "idHistory": [
-        "82535922-d4a5-4c40-a15b-e0a97191f7e1",
-        "dc9fb067-a361-4048-a118-42209132812a",
-        "9744eecd-50f1-4da0-9c60-e5e124bab8af",
-        "d2ca9303-b17c-4451-a37d-cd57ff881d9c",
-        "3e6b91d7-5fc2-4fb6-81ab-f2fbaf7c0f83",
-        "af361956-b749-42e4-98a6-a7b56e7c5177",
         "1b555cb3-2880-427a-b3d4-a4c4565fa5eb",
         "d45b6152-bff2-4f5d-9de3-79b9e480c259",
         "6a43e1c7-5adf-4a07-9e8a-4ad4df66cf56",
@@ -107,7 +101,13 @@
         "dc3e7ee2-1774-4a93-8100-4000b0ad6676",
         "1d471798-272b-4504-9a15-b6520b43da9f",
         "8644bc66-44a9-4a5c-9702-3ceaa5b2e4f2",
-        "e43bf0e8-a7b6-4875-93ac-5503c6c6385d"
+        "e43bf0e8-a7b6-4875-93ac-5503c6c6385d",
+        "56902ea3-85aa-431d-9a4a-8f205970f273",
+        "d0c83840-41db-4750-b2cb-681791407a11",
+        "74f6983f-ac8a-497f-b17e-40b5a0216d47",
+        "e3d84a54-6755-413c-a2f4-2d75b125d3b6",
+        "0eb6f395-a293-435c-a16a-1b11699525dc",
+        "22a84269-a512-453b-a38f-559f8858c892"
       ]
     }
   }

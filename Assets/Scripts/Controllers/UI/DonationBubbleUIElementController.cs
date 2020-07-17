@@ -13,6 +13,7 @@ public class DonationBubbleUIElementController : MonoBehaviour
     private const string k_textBodyFormat = "<b>{0}</b> donated <b>{1}</b>!";
     
     [SerializeField] private RawImage _profileImage;
+    [SerializeField] private Texture _defaultTexture;
     [SerializeField] private Text _text;
 
     private LocalizationService _localizationService;
@@ -39,6 +40,7 @@ public class DonationBubbleUIElementController : MonoBehaviour
 
     public void SetData(string name, string message, string profileURL, float amount)
     {
+        _profileImage.texture = _defaultTexture;
         _text.text = String.Format(k_textBodyFormat, name, _localizationService.LocalizeMoney(amount));
         
         _imageProvisionService.ResolveImage(profileURL, (texture) =>
