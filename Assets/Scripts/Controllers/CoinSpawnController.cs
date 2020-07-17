@@ -8,6 +8,15 @@ using Random = System.Random;
 
 public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnControllerData>
 {
+    public sealed class DonationEventData
+    {
+        public string Name;
+        public string Message;
+        public string ProfileURL;
+        public float Amount;
+        public bool ShouldShow;
+    }
+    
     public delegate Vector3 CoinSpawnPositionProvider();
     private const int k_populateBoardWaves = 20;
     private const float k_populateBoardDelay = 0;
@@ -20,6 +29,8 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
 
     private List<Coin> _coins = new List<Coin>();
     private List<Coin> _coinPrefabsSortedByValue = new List<Coin>();
+
+    public event Action<DonationEventData> OnDonationMade;
 
     private bool _isPopulating = false;
     
@@ -79,7 +90,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         float valuePerWave = value / k_populateBoardWaves;
         for (int i = 0; i < k_populateBoardWaves; i++)
         {
-            QueueDonation("Backlog", "", GetRandomTestinURL(), valuePerWave, _boardController.GetRandomPopulationPosition);
+            QueueDonation("Backlog", "", GetRandomTestinURL(), valuePerWave, _boardController.GetRandomPopulationPosition, false);
             yield return new WaitForSeconds(k_populateBoardDelay);
         }
         
@@ -114,7 +125,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         }
     }
 
-    public void QueueDonation(string name, string message, string profileURL, float amount, CoinSpawnPositionProvider positionProvider)
+    public void QueueDonation(string name, string message, string profileURL, float amount, CoinSpawnPositionProvider positionProvider, bool shouldShow = true)
     {
         Debug.Log($"Queuing donation, name: {name}, message: {message}, amount: {amount}");
         var coins = BreakDownBalanceIntoCoins(amount);
@@ -126,6 +137,17 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
             newCoin.transform.position = positionProvider();
             _coins.Add(newCoin);
         }
+
+        var donationEventData = new DonationEventData
+        {
+            Name = name,
+            Message = message,
+            ProfileURL = profileURL,
+            Amount = amount,
+            ShouldShow = shouldShow,
+        };
+        
+        OnDonationMade?.Invoke(donationEventData);
     }
 
     private string GetRandomTestinURL()
@@ -151,9 +173,9 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         return urls[UnityEngine.Random.Range(0, urls.Length)];
     }
 
-    public void QueueDonation(string name, string message, string profileURL, float amount)
+    public void QueueDonation(string name, string message, string profileURL, float amount, bool shouldShow = true)
     {
-        QueueDonation(name, message, profileURL, amount, GetCoinDropPosition);
+        QueueDonation(name, message, profileURL, amount, GetCoinDropPosition, shouldShow);
     }
     
     private List<Coin> BreakDownBalanceIntoCoins(float amount)
