@@ -8,6 +8,7 @@
       <Path>Library/PackageCache/com.unity.ide.rider@1.1.4</Path>
       <Path>Library/PackageCache/com.unity.ide.vscode@1.1.4</Path>
       <Path>Library/PackageCache/com.unity.postprocessing@2.3.0</Path>
+      <Path>Library/PackageCache/com.unity.recorder@2.2.0-preview.4</Path>
       <Path>Library/PackageCache/com.unity.test-framework@1.1.9</Path>
       <Path>Library/PackageCache/com.unity.textmeshpro@2.0.1</Path>
       <Path>Library/PackageCache/com.unity.timeline@1.2.10</Path>
@@ -20,6 +21,7 @@
       <Path>Build</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
+      <Path>Recordings</Path>
       <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
