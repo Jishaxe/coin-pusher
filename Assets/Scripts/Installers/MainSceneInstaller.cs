@@ -1,7 +1,4 @@
 ﻿using Services;
-using UnityEngine.Serialization;
-using UnityEngine.SocialPlatforms;
-using UnityEngine.tvOS;
 using Zenject;
 
 public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>

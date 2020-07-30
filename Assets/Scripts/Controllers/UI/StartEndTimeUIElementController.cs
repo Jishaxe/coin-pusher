@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class StartEndTimeUIElementController : MonoBehaviour
 {
     private const string k_passedEndDateMessage = "We're finished!";
+    private const string k_startedAtFormat = "Started {0}";
     
     [SerializeField] private float _updateTimeEvery = 1f;
     [SerializeField] private Text _startText;
@@ -15,13 +16,13 @@ public class StartEndTimeUIElementController : MonoBehaviour
     [SerializeField] private Text _timeLeftText;
 
     private DateTime _startDate;
-    private DateTime _endDate;
+    private DateTime? _endDate;
     void Start()
     {
         StartCoroutine(UpdateTimesCoroutine());
     }
 
-    public void SetDates(DateTime startDate, DateTime endDate)
+    public void SetDates(DateTime startDate, DateTime? endDate)
     {
         this._startDate = startDate;
         this._endDate = endDate;
@@ -46,23 +47,36 @@ public class StartEndTimeUIElementController : MonoBehaviour
     
     private void RefreshTimes()
     {
-        _startText.text = FormatDate(_startDate);
-        _endText.text = FormatDate(_endDate);
-
-        var now = DateTime.Now;
-        var timeLeft = String.Empty;
-        
-        if (now > _endDate)
+        if (_endDate.HasValue)
         {
-            timeLeft = k_passedEndDateMessage;
+            _startText.gameObject.SetActive(true);
+            _endText.gameObject.SetActive(true);
+            
+            _startText.text = FormatDate(_startDate);
+            _endText.text = FormatDate(_endDate.Value);
+
+            var now = DateTime.Now;
+            var timeLeft = String.Empty;
+
+            if (now > _endDate)
+            {
+                timeLeft = k_passedEndDateMessage;
+            }
+            else
+            {
+                var difference = _endDate.Value - now;
+                timeLeft = FormatTimeSpan(difference);
+            }
+
+            _timeLeftText.text = timeLeft;
         }
         else
         {
-            var difference = _endDate - now;
-            timeLeft = FormatTimeSpan(difference);
-        }
+            _startText.gameObject.SetActive(false);
+            _endText.gameObject.SetActive(false);
 
-        _timeLeftText.text = timeLeft;
+            _timeLeftText.text = String.Format(k_startedAtFormat, FormatDate(_startDate));
+        }
     }
     
     private string ToLongString(TimeSpan time)

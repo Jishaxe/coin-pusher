@@ -6127,6 +6127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _profileImage: {fileID: 1028256316}
+  _defaultTexture: {fileID: 2800000, guid: 585504b7d1aacc2498629e2a50850e3a, type: 3}
   _text: {fileID: 1408477489}
 --- !u!1001 &611877559
 PrefabInstance:

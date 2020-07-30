@@ -25,7 +25,7 @@ public class DonationBubbleUIElementController : MonoBehaviour
     private List<Action> _onPresentCompleteCallbacks = new List<Action>();
     private List<Action> _onDismissCompleteCallbacks = new List<Action>();
     
-    // Start is called before the first frame update
+    // Start is called before the first frame update    
     void Start()
     {
         _animator = GetComponent<Animator>();
