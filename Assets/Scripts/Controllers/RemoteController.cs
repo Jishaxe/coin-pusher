@@ -125,7 +125,7 @@ public class RemoteController: MonoBehaviour
 
         if (_firstPoll)
         {
-            _coinSpawnController.PopulateBoard(Mathf.Min(_campaignModel.TotalRaised, 9.99f));
+            //_coinSpawnController.PopulateBoard(Mathf.Min(_campaignModel.TotalRaised, 9.99f));
             _firstPoll = false;
         }
         

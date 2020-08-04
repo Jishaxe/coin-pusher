@@ -37,6 +37,11 @@ public class MainSceneController: IInitializable, ITickable
             _coinSpawnController.PopulateBoard(53.55f);
         }
 
+        if (Input.GetKeyDown(KeyCode.RightControl))
+        {
+            _coinSpawnController.ClearBoard();
+        }
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
             _saveGameService.ClearSave();

@@ -24,13 +24,7 @@ public class CampaignModel: ISaveLoadable<RawCampaignModel>
     public float TotalRaised { get; set; }
     public float Goal { get; set; }
 
-    public float Raised
-    {
-        get
-        {
-            return TotalRaised - _spawnController.ValueOnBoard;
-        }
-    }
+    public float Raised => TotalRaised;
 
     public DateTime StartDate { get; set; }
     public DateTime? EndDate { get; set; }

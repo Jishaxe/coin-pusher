@@ -132,10 +132,9 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
 
         foreach (Coin coin in coins)
         {
-            var newCoin = _coinFactory.Create(coin);
-            newCoin.GetComponent<CoinMarkingComponent>().ApplyMarking(profileURL);
-            newCoin.transform.position = positionProvider();
-            _coins.Add(newCoin);
+            var spawnedCoin = InstansiateCoinFromPrefab(coin);
+            spawnedCoin.transform.position = positionProvider();
+            spawnedCoin.ApplyMarking(profileURL);
         }
 
         var donationEventData = new DonationEventData
@@ -148,6 +147,14 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         };
         
         OnDonationMade?.Invoke(donationEventData);
+    }
+
+    private Coin InstansiateCoinFromPrefab(Coin prefab)
+    {
+        var newCoin = _coinFactory.Create(prefab);
+        _coins.Add(newCoin);
+
+        return newCoin;
     }
 
     private string GetRandomTestinURL()
@@ -195,15 +202,31 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         return results;
     }
 
+    private Coin GetCoinPrefabFromValue(float value)
+    {
+        return _coinPrefabsSortedByValue.FirstOrDefault((coin) => Mathf.Approximately(value, coin.value));
+    }
+
     public void Load(RawCoinSpawnControllerData data)
     {
         ClearBoard();
+
+        if (data.coins == null)
+        {
+            return;
+        }
         
         foreach (var rawCoinData in data.coins)
         {
-            //var coin = CreateCoin();
-            //coin.Load(rawCoinData);
+            var prefab = GetCoinPrefabFromValue(rawCoinData.value);
+            Debug.Assert(prefab != null, $"Can't find prefab with value of {rawCoinData.value}");
+
+            var coin = InstansiateCoinFromPrefab(prefab);
+            coin.Load(rawCoinData);
+            coin.ApplyMarking();
         }
+        
+        Debug.Log($"Loaded {data.coins.Count} from disk");
     }
 
     public RawCoinSpawnControllerData Save()

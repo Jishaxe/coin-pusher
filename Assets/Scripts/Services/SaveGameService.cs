@@ -32,7 +32,7 @@ public class SaveGameService
     public void SaveGame()
     {
         var saveGame = new SaveGameData();
-        //saveGame.CoinSpawnController = _coinSpawnController.Save();
+        saveGame.CoinSpawnController = _coinSpawnController.Save();
         saveGame.PusherController = _pusherController.Save();
         saveGame.CommandController = _commandController.Save();
         SaveJson(JsonConvert.SerializeObject(saveGame, Formatting.Indented));
@@ -70,7 +70,7 @@ public class SaveGameService
         var saveGame = JsonConvert.DeserializeObject<SaveGameData>(json);
         
         // TODO: Check for null here
-        //_coinSpawnController.Load(saveGame.CoinSpawnController);
+        _coinSpawnController.Load(saveGame.CoinSpawnController);
         _pusherController.Load(saveGame.PusherController);
         _commandController.Load(saveGame.CommandController);
     }

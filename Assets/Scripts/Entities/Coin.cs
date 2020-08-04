@@ -26,6 +26,7 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
     
     private Rigidbody _rigidbody;
     private Collider _collider;
+    private CoinMarkingComponent _coinMarkingComponent;
 
     [SerializeField] private ParticleSystem _collectionPFX;
 
@@ -39,16 +40,18 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
     
     public float value;
     private bool _isCollected = false;
+    private string _markingURL;
 
     public class Factory : PlaceholderFactory<Coin, Coin>
     {
         
     }
 
-    void Start()
+    void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _collider = GetComponent<Collider>();
+        _coinMarkingComponent = GetComponent<CoinMarkingComponent>();
     }
 
     public void Destroy()
@@ -110,7 +113,9 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
 
         rawCoinData.velocity = _rigidbody.velocity;
         rawCoinData.angularVelocity = _rigidbody.angularVelocity;
-
+        rawCoinData.markingURL = _markingURL;
+        rawCoinData.value = value;
+        
         return rawCoinData;
     }
 
@@ -121,6 +126,8 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
         _rigidbody.velocity = data.velocity;
         _rigidbody.angularVelocity = data.angularVelocity;
         _rigidbody.WakeUp();
+
+        _markingURL = data.markingURL;
     }
 
     private void PlayCoinDropSound()
@@ -134,6 +141,17 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
         var sound = _coinCollectSounds.GetRandomClip();
         _coinCollectAudioSource.PlayOneShot(sound);
     }
+
+    public void ApplyMarking(string markingURL)
+    {
+        _markingURL = markingURL;
+        _coinMarkingComponent.ApplyMarking(markingURL);
+    }
+
+    public void ApplyMarking()
+    {
+        _coinMarkingComponent.ApplyMarking(_markingURL);
+    }
 }
 
 public class RawCoinData
@@ -142,5 +160,7 @@ public class RawCoinData
     public Vector3 rotation;
     public Vector3 velocity;
     public Vector3 angularVelocity;
+    public string markingURL;
+    public float value;
 }
 
