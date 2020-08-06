@@ -26,7 +26,9 @@ public class CauseInfoUIElementController : MonoBehaviour
 
     private void SetImage(Texture2D image)
     {
-        if (image != null) _causeImage.texture = image;
-        else _causeImage.color = Color.magenta;
+        if (image != null)
+        {
+            _causeImage.texture = image;
+        }
     }
 }

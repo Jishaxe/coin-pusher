@@ -79,7 +79,7 @@ namespace Services
             {
                 var tex = ((DownloadHandlerTexture)www.downloadHandler).texture;
                 tex.name = url;
-                
+
                 OnComplete.Invoke(tex);
             }
         }

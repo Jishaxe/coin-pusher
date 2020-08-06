@@ -51,7 +51,7 @@ public class SoundClipContainer : MonoBehaviour
         _chanceArray = newChanceArray.ToArray();
     }
 
-    void Start() {
+    void Awake() {
         BuildChanceArray();
     }
 

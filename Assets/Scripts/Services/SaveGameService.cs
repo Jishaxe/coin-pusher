@@ -54,9 +54,6 @@ public class SaveGameService
         StreamWriter writer = new StreamWriter(path, false);
         writer.Write(json);
         writer.Close();
-        
-        
-        Debug.Log("Saved data: " + json);
     }
 
     public void LoadGame()
@@ -70,9 +67,9 @@ public class SaveGameService
         var saveGame = JsonConvert.DeserializeObject<SaveGameData>(json);
         
         // TODO: Check for null here
-        _coinSpawnController.Load(saveGame.CoinSpawnController);
-        _pusherController.Load(saveGame.PusherController);
-        _commandController.Load(saveGame.CommandController);
+        if (saveGame.CoinSpawnController != null) _coinSpawnController.Load(saveGame.CoinSpawnController);
+        if (saveGame.PusherController != null) _pusherController.Load(saveGame.PusherController);
+        if (saveGame.CommandController != null) _commandController.Load(saveGame.CommandController);
     }
 
     private bool TryGetJson(out string json)
