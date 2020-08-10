@@ -42,7 +42,9 @@ public class RemoteController: MonoBehaviour
     [Serializable]
     public sealed class Settings
     {
+        public bool isTesting;
         public string baseURL;
+        public string localBaseURL;
         public float pollTime;
     }
 
@@ -101,7 +103,9 @@ public class RemoteController: MonoBehaviour
     IEnumerator Poll()
     {
         var result = new WebRequestResult();
-        yield return StartCoroutine(GetTextFromEndpoint($"{_settings.baseURL}{k_commandsEnd}", result));
+
+        string baseURL = _settings.isTesting ? _settings.localBaseURL : _settings.baseURL;
+        yield return StartCoroutine(GetTextFromEndpoint($"{baseURL}{k_commandsEnd}", result));
 
         if (result.error != null)
         {

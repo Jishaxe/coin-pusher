@@ -12,6 +12,7 @@ public class RawCampaignModel
     public float Goal;
     public string StartDate;
     public string EndDate;
+    public string Currency;
 }
 public class CampaignModel: ISaveLoadable<RawCampaignModel>
 {
@@ -28,6 +29,7 @@ public class CampaignModel: ISaveLoadable<RawCampaignModel>
 
     public DateTime StartDate { get; set; }
     public DateTime? EndDate { get; set; }
+    public string Currency { get; set; }
 
     [Inject]
     void Construct(CoinSpawnController spawnController)
@@ -52,7 +54,8 @@ public class CampaignModel: ISaveLoadable<RawCampaignModel>
         TotalRaised = data.TotalRaised;
         Goal = data.Goal;
         StartDate = DateTime.Parse(data.StartDate);
-
+        Currency = data.Currency;
+        
         if (String.IsNullOrEmpty(data.EndDate))
         {
             EndDate = null;

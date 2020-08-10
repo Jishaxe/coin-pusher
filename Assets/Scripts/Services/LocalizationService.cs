@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using UnityEngine;
 using Zenject;
 
@@ -10,17 +11,34 @@ public class LocalizationService
     [Serializable]
     public sealed class Settings
     {
-        public string Locale;
     }
 
     private readonly Settings _settings;
     private CultureInfo _culture;
+
+    private CampaignModel _campaignModel;
     
     [Inject]
-    public LocalizationService(Settings settings)
+    public LocalizationService(Settings settings, CampaignModel campaignModel)
     {
         _settings = settings;
-        _culture = CultureInfo.CreateSpecificCulture(_settings.Locale);
+        _campaignModel = campaignModel;
+        _campaignModel.OnUpdated += OnCampaignUpdated;
+    }
+
+    private void OnCampaignUpdated()
+    {
+        SetCurrency(_campaignModel.Currency);
+    }
+    
+    public void SetCurrency(string currencyName)
+    { 
+        _culture = CultureInfo
+            .GetCultures(CultureTypes.SpecificCultures).FirstOrDefault(x => new RegionInfo(x.LCID).ISOCurrencySymbol == currencyName);
+        
+        Debug.Assert(_culture != null, $"Could not get culture for currency {currencyName}");
+        
+        Debug.Log($"Matched first culture with currency {currencyName}: {_culture}");
     }
 
     public string LocalizeMoney(in float money)

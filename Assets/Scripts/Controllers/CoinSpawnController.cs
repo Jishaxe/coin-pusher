@@ -68,7 +68,6 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
     private void OnCoinCollected(Coin coin)
     {
         _coins.Remove(coin);
-        _campaignModel.Update();
     }
     
     private void ProcessCoinPrefabs()
@@ -106,7 +105,6 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         }
         
         _coins.Clear();
-        _campaignModel.Update();
     }
 
     private Vector3 GetCoinDropPosition()

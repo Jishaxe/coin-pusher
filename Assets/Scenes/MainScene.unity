@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1.14
+  m_AmbientIntensity: 1.46
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 14162e8b7deb5c0418b4810f67d18c81, type: 2}
@@ -7755,8 +7755,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIController: {fileID: 2033800945}
-  LocalizationSettings:
-    Locale: en-US
   BoardSettings:
     CoinSpawnTransform: {fileID: 1243603115}
     CoinPopulateArea: {fileID: 1119501066}
@@ -7819,7 +7817,9 @@ MonoBehaviour:
       m_RotationOrder: 4
     cycleLength: 8
   RemoteSettings:
-    baseURL: http://localhost:4000
+    isTesting: 1
+    baseURL: https://coin-pusher-for-charity.herokuapp.com
+    localBaseURL: http://localhost:4000
     pollTime: 1
   LightbarEffectSettings:
     lightbarMaterial: {fileID: 2100000, guid: ea1905ac594735042af79569ba7b3d82, type: 2}
@@ -9848,7 +9848,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.48e-41, y: 1.04e-43, z: 6.88e-43, w: 0}
+  m_BoundingSphereOverride: {x: 1.1231e-41, y: 1.01e-43, z: 5.59e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
