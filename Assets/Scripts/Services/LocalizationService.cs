@@ -17,6 +17,8 @@ public class LocalizationService
     private CultureInfo _culture;
 
     private CampaignModel _campaignModel;
+
+    public event Action LocaleUpdatedEvent;
     
     [Inject]
     public LocalizationService(Settings settings, CampaignModel campaignModel)
@@ -33,8 +35,14 @@ public class LocalizationService
     
     public void SetCurrency(string currencyName)
     { 
-        _culture = CultureInfo
-            .GetCultures(CultureTypes.SpecificCultures).FirstOrDefault(x => new RegionInfo(x.LCID).ISOCurrencySymbol == currencyName);
+        var newCulture = CultureInfo.GetCultures(CultureTypes.SpecificCultures).FirstOrDefault(x => new RegionInfo(x.LCID).ISOCurrencySymbol == currencyName);
+
+        if (newCulture != _culture)
+        {
+            LocaleUpdatedEvent?.Invoke();
+        }
+
+        _culture = newCulture;
         
         Debug.Assert(_culture != null, $"Could not get culture for currency {currencyName}");
         

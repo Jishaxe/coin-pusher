@@ -29,8 +29,22 @@ public class MoneyUIElementController : MonoBehaviour
     void Construct(LocalizationService localizationService)
     {
         _localizationService = localizationService;
+        _localizationService.LocaleUpdatedEvent += OnLocaleUpdated;
     }
 
+    private void OnDestroy()
+    {
+        _localizationService.LocaleUpdatedEvent -= OnLocaleUpdated;
+    }
+
+    private void OnLocaleUpdated()
+    {
+        if (_moneyTickingCoroutine == null)
+        {
+            SetText(_currentValue, true);
+        }
+    }
+    
     void Start()
     {
         _text = GetComponent<Text>();
@@ -112,7 +126,6 @@ public class MoneyUIElementController : MonoBehaviour
         if (removeTrailingZeroes) text = StripTrailingZeroes(text);
 
         _text.text = text;
-
     }
     
     public string StripTrailingZeroes(string temp)

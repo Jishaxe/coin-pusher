@@ -27,8 +27,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Logos
+    second: {fileID: 2100000, guid: 8ee727d4f057f2341a7bcbd88137eab6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material
     second: {fileID: 2100000, guid: f9a7329aa4cf8a04488941bd9556449e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Minecraft_Grass
+    second: {fileID: 2100000, guid: 989b25eb41bcbbb49a7a3049c83c3b8b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
