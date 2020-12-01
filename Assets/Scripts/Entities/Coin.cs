@@ -20,7 +20,7 @@ public class CoinFactory : IFactory<Coin, Coin>
     }
 }
 
-public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
+public class Coin : Item
 {
     public static event Action<Coin> OnCoinCollected;
     
@@ -45,6 +45,11 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
     public class Factory : PlaceholderFactory<Coin, Coin>
     {
         
+    }
+
+    public override void Initialize()
+    {
+        ApplyMarking();
     }
 
     void Awake()
@@ -105,7 +110,7 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
         yield return new WaitUntil(() => _collectionPFX.isStopped);
     }
 
-    public RawCoinData Save()
+    public override RawItemData Save()
     {
         var rawCoinData = new RawCoinData();
         rawCoinData.position = transform.position;
@@ -119,8 +124,9 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
         return rawCoinData;
     }
 
-    public void Load(RawCoinData data)
+    public override void Load(RawItemData rawData)
     {
+        var data = (RawCoinData) rawData;
         transform.position = data.position;
         transform.rotation = Quaternion.Euler(data.rotation);
         _rigidbody.velocity = data.velocity;
@@ -154,7 +160,7 @@ public class Coin : MonoBehaviour, ISaveLoadable<RawCoinData>
     }
 }
 
-public class RawCoinData
+public class RawCoinData: RawItemData
 {
     public Vector3 position;
     public Vector3 rotation;

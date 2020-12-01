@@ -10,6 +10,7 @@ public class SaveGameData
     public RawCoinSpawnControllerData CoinSpawnController;
     public RawPusherControllerData PusherController;
     public RawCommandController CommandController;
+    public RawBoardControllerData BoardController;
 }
 
 public class SaveGameService
@@ -20,13 +21,15 @@ public class SaveGameService
     private readonly CoinSpawnController _coinSpawnController;
     private readonly PusherController _pusherController;
     private readonly CommandController _commandController;
+    private readonly BoardController _boardController;
     
     [Inject]
-    public SaveGameService(CoinSpawnController coinSpawnController, PusherController pusherController, CommandController commandController)
+    public SaveGameService(CoinSpawnController coinSpawnController, PusherController pusherController, CommandController commandController, BoardController boardController)
     {
         _coinSpawnController = coinSpawnController;
         _pusherController = pusherController;
         _commandController = commandController;
+        _boardController = boardController;
     }
 
     public void SaveGame()
@@ -35,7 +38,12 @@ public class SaveGameService
         saveGame.CoinSpawnController = _coinSpawnController.Save();
         saveGame.PusherController = _pusherController.Save();
         saveGame.CommandController = _commandController.Save();
-        SaveJson(JsonConvert.SerializeObject(saveGame, Formatting.Indented));
+        saveGame.BoardController = _boardController.Save();
+        
+        SaveJson(JsonConvert.SerializeObject(saveGame, Formatting.Indented, new JsonSerializerSettings()
+        {
+            TypeNameHandling = TypeNameHandling.All
+        }));
     }
     
     public void ClearSave()
@@ -64,12 +72,15 @@ public class SaveGameService
             return;
         }
         
-        var saveGame = JsonConvert.DeserializeObject<SaveGameData>(json);
+        var saveGame = JsonConvert.DeserializeObject<SaveGameData>(json, new JsonSerializerSettings()
+        {
+            TypeNameHandling = TypeNameHandling.All
+        });
         
-        // TODO: Check for null here
         if (saveGame.CoinSpawnController != null) _coinSpawnController.Load(saveGame.CoinSpawnController);
         if (saveGame.PusherController != null) _pusherController.Load(saveGame.PusherController);
         if (saveGame.CommandController != null) _commandController.Load(saveGame.CommandController);
+        if (saveGame.BoardController != null) _boardController.Load(saveGame.BoardController);
     }
 
     private bool TryGetJson(out string json)

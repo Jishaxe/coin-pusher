@@ -22,13 +22,9 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
     private const float k_populateBoardDelay = 0;
     
     private Settings _settings;
-    private Coin.Factory _coinFactory;
     private BoardController _boardController;
-    private PusherController _pusherController;
-    private CampaignModel _campaignModel;
-
-    private List<Coin> _coins = new List<Coin>();
-    private List<Coin> _coinPrefabsSortedByValue = new List<Coin>();
+    private BoardItemsModel _boardItems;
+    private ItemSpawnerProvider _itemSpawnerProvider;
 
     public event Action<DonationEventData> OnDonationMade;
 
@@ -38,7 +34,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
     {
         get
         {
-            return _coins.Sum(coin => coin.value);
+            return _boardItems.Coins.Sum(coin => coin.value);
         }
     }
     
@@ -53,27 +49,20 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
     }
 
     [Inject]
-    public void Construct(Settings settings, Coin.Factory coinFactory, BoardController boardController, PusherController pusherController, CampaignModel campaignModel)
+    public void Construct(Settings settings, BoardController boardController, BoardItemsModel boardItemsModel, PusherController pusherController, CampaignModel campaignModel, ItemSpawnerProvider itemSpawnerProvider)
     {
         _settings = settings;
-        _coinFactory = coinFactory;
         _boardController = boardController;
-        _pusherController = pusherController;
-        _campaignModel = campaignModel;
-        ProcessCoinPrefabs();
+        _boardItems = boardItemsModel;
+        _itemSpawnerProvider = itemSpawnerProvider;
 
         Coin.OnCoinCollected += OnCoinCollected;
     }
 
     private void OnCoinCollected(Coin coin)
     {
-        _coins.Remove(coin);
-    }
-    
-    private void ProcessCoinPrefabs()
-    {
-        _coinPrefabsSortedByValue = _settings.coinPrefabs.OrderByDescending(coin => coin.value).ToList();
-        Debug.Assert(!_coinPrefabsSortedByValue.Any((coin) => coin.value == 0), "Coin has zero value");
+        // the coin will take care of destroying itself
+        _boardController.RemoveItem(coin, destroy: false);
     }
 
     public void PopulateBoard(float value)
@@ -99,12 +88,10 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
 
     public void ClearBoard()
     {
-        foreach (Coin coin in _coins)
+        foreach (Coin coin in _boardItems.Coins)
         {
-            coin.Destroy();
+            _boardController.RemoveItem(coin);
         }
-        
-        _coins.Clear();
     }
 
     private Vector3 GetCoinDropPosition()
@@ -130,7 +117,11 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
 
         foreach (Coin coin in coins)
         {
-            var spawnedCoin = InstansiateCoinFromPrefab(coin);
+            var spawnedCoin = SpawnCoinFromData(new RawCoinData()
+            {
+                value = coin.value
+            });
+
             spawnedCoin.transform.position = positionProvider();
             spawnedCoin.ApplyMarking(profileURL);
         }
@@ -147,14 +138,11 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         OnDonationMade?.Invoke(donationEventData);
     }
 
-    private Coin InstansiateCoinFromPrefab(Coin prefab)
+    private Coin SpawnCoinFromData(RawCoinData data)
     {
-        var newCoin = _coinFactory.Create(prefab);
-        _coins.Add(newCoin);
-
-        return newCoin;
+        return (Coin)_boardController.SpawnItemFromData(data);
     }
-
+    
     private string GetRandomTestinURL()
     {
         string[] urls =
@@ -169,10 +157,6 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
             "https://cdn.discordapp.com/avatars/178464497336320000/218d140830b65726e91968e92540cb69.png?size=128",
             "https://cdn.discordapp.com/avatars/328123626174021634/b2c7466676198ee9d0ccda3e8582ade0.png?size=128",
             "https://cdn.discordapp.com/avatars/216145046347448320/35036ca3017da2d6ca5e4975db1f1015.png?size=128"*/
-            
-            
-            
-            
         };
 
         return urls[UnityEngine.Random.Range(0, urls.Length)];
@@ -189,7 +173,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         
         while (amount > 0)
         {
-            var candidates = _coinPrefabsSortedByValue.Where((cn) => cn.value <= amount);
+            var candidates = _itemSpawnerProvider.CoinPrefabsSortedByValue.Where((cn) => cn.value <= amount);
             if (!candidates.Any()) break;
 
             var coin = candidates.First();
@@ -200,48 +184,18 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         return results;
     }
 
-    private Coin GetCoinPrefabFromValue(float value)
+    public RawCoinSpawnControllerData Save()
     {
-        return _coinPrefabsSortedByValue.FirstOrDefault((coin) => Mathf.Approximately(value, coin.value));
+        return new RawCoinSpawnControllerData();
     }
 
     public void Load(RawCoinSpawnControllerData data)
     {
-        ClearBoard();
-
-        if (data.coins == null)
-        {
-            return;
-        }
-        
-        foreach (var rawCoinData in data.coins)
-        {
-            var prefab = GetCoinPrefabFromValue(rawCoinData.value);
-            Debug.Assert(prefab != null, $"Can't find prefab with value of {rawCoinData.value}");
-
-            var coin = InstansiateCoinFromPrefab(prefab);
-            coin.Load(rawCoinData);
-            coin.ApplyMarking();
-        }
-        
-        Debug.Log($"Loaded {data.coins.Count} from disk");
-    }
-
-    public RawCoinSpawnControllerData Save()
-    {
-        var data = new RawCoinSpawnControllerData();
-
-        foreach (Coin coin in _coins)
-        {
-            var rawCoinData = coin.Save();
-            data.coins.Add(rawCoinData);
-        }
-
-        return data;
+        // nothing yet
     }
 }
 
 public class RawCoinSpawnControllerData
 {
-    public List<RawCoinData> coins = new List<RawCoinData>();
+    
 }

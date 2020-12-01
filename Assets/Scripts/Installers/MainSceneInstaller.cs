@@ -14,6 +14,7 @@ public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>
     public override void InstallBindings()
     {
         Container.BindInterfacesAndSelfTo<CampaignModel>().AsSingle();
+        Container.BindInterfacesAndSelfTo<BoardItemsModel>().AsSingle();
         
         Container.BindInstance(UIController);
         Container.BindInterfacesAndSelfTo<MainSceneController>().AsSingle();
@@ -32,6 +33,8 @@ public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>
         Container.BindInterfacesAndSelfTo<BoardController>().AsSingle();
 
         Container.BindInterfacesAndSelfTo<SaveGameService>().AsSingle();
+
+        Container.BindInterfacesAndSelfTo<ItemSpawnerProvider>().AsSingle();
 
         Container.BindInstance(RemoteSettings);
         Container.BindInterfacesAndSelfTo<RemoteController>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
