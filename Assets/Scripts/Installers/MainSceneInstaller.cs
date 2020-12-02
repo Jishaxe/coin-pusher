@@ -7,6 +7,7 @@ public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>
     public LocalizationService.Settings LocalizationSettings;
     public BoardController.Settings BoardSettings;
     public CoinSpawnController.Settings CoinSpawnerSettings;
+    public ItemGoalSpawnController.Settings ItemGoalSpawnerSettings;
     public PusherController.Settings PusherSettings;
     public RemoteController.Settings RemoteSettings;
     public LightbarEffectController.Settings LightbarEffectSettings;
@@ -24,7 +25,11 @@ public class MainSceneInstaller : MonoInstaller<MainSceneInstaller>
         
         Container.BindInstance(CoinSpawnerSettings);
         Container.BindInterfacesAndSelfTo<CoinSpawnController>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
-        Container.BindFactory<Coin, Coin, Coin.Factory>().FromFactory<CoinFactory>();
+        
+        Container.BindInstance(ItemGoalSpawnerSettings);
+        Container.BindInterfacesAndSelfTo<ItemGoalSpawnController>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
+        
+        Container.BindFactory<Item, Item, Item.Factory>().FromFactory<ItemFactory>();
 
         Container.BindInstance(PusherSettings);
         Container.BindInterfacesAndSelfTo<PusherController>().AsSingle();

@@ -34,7 +34,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
     {
         get
         {
-            return _boardItems.Coins.Sum(coin => coin.value);
+            return _boardItems.Coins.Sum(coin => coin.Value);
         }
     }
     
@@ -43,9 +43,6 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
     {
         public List<Coin> coinPrefabs;
         public Vector3 randomCoinDropOffsetFromCenter;
-        public float distanceBetweenCoins;
-        public float coinRadius;
-        public bool populateOnStart;
     }
 
     [Inject]
@@ -55,14 +52,6 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         _boardController = boardController;
         _boardItems = boardItemsModel;
         _itemSpawnerProvider = itemSpawnerProvider;
-
-        Coin.OnCoinCollected += OnCoinCollected;
-    }
-
-    private void OnCoinCollected(Coin coin)
-    {
-        // the coin will take care of destroying itself
-        _boardController.RemoveItem(coin, destroy: false);
     }
 
     public void PopulateBoard(float value)
@@ -86,7 +75,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         Debug.Log("Populuated, value on board: " + ValueOnBoard);
     }
 
-    public void ClearBoard()
+    public void RemoveAllCoins()
     {
         foreach (Coin coin in _boardItems.Coins)
         {
@@ -99,7 +88,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         Vector3 offset = Vector3.Lerp(-_settings.randomCoinDropOffsetFromCenter,
             _settings.randomCoinDropOffsetFromCenter, UnityEngine.Random.value);
 
-        return _boardController.CoinSpawnPosition + offset;
+        return _boardController.ItemSpawnPosition + offset;
     }
 
     public void Update()
@@ -119,7 +108,7 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         {
             var spawnedCoin = SpawnCoinFromData(new RawCoinData()
             {
-                value = coin.value
+                value = coin.Value
             });
 
             spawnedCoin.transform.position = positionProvider();
@@ -173,12 +162,12 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         
         while (amount > 0)
         {
-            var candidates = _itemSpawnerProvider.CoinPrefabsSortedByValue.Where((cn) => cn.value <= amount);
+            var candidates = _itemSpawnerProvider.CoinPrefabsSortedByValue.Where((cn) => cn.Value <= amount);
             if (!candidates.Any()) break;
 
             var coin = candidates.First();
             results.Add(coin);
-            amount -= coin.value;
+            amount -= coin.Value;
         }
 
         return results;

@@ -15,6 +15,7 @@ public class RandomAudioClip {
 /// </summary>
 public class SoundClipContainer : MonoBehaviour
 {
+    public AudioSource AudioSource;
     [SerializeField] RandomAudioClip[] sounds;
 
     /// <summary>

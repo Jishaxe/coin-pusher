@@ -33,13 +33,13 @@ public class MainSceneController: IInitializable, ITickable
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            _coinSpawnController.ClearBoard();
+            _coinSpawnController.RemoveAllCoins();
             _coinSpawnController.PopulateBoard(53.55f);
         }
 
         if (Input.GetKeyDown(KeyCode.RightControl))
         {
-            _coinSpawnController.ClearBoard();
+            _coinSpawnController.RemoveAllCoins();
         }
 
         if (Input.GetKeyDown(KeyCode.Return))

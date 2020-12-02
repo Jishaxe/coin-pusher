@@ -5,13 +5,13 @@ using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
 
-public class BoardController: ISaveLoadable<RawBoardControllerData>
+public class BoardController: ISaveLoadable<RawBoardControllerData>, IDisposable
 {
     private Settings _settings;
     private BoardItemsModel _itemsModel;
     private ItemSpawnerProvider _itemSpawnerProvider;
 
-    public Vector3 CoinSpawnPosition
+    public Vector3 ItemSpawnPosition
     {
         get
         {
@@ -25,7 +25,23 @@ public class BoardController: ISaveLoadable<RawBoardControllerData>
         public Transform CoinSpawnTransform;
         public BoxCollider CoinPopulateArea;
     }
+    
+    [Inject]
+    public BoardController(Settings settings, BoardItemsModel itemsModel, ItemSpawnerProvider itemSpawnerProvider)
+    {
+        this._settings = settings;
+        this._itemsModel = itemsModel;
+        this._itemSpawnerProvider = itemSpawnerProvider;
 
+        Item.ItemCollectedEvent += OnItemCollected;
+    }
+
+    private void OnItemCollected(Item item)
+    {
+        // remove the item from this list - it will take care of destroying itself.
+        RemoveItem(item, false);
+    }
+    
     public Vector3 GetRandomPopulationPosition()
     {
         var bounds = _settings.CoinPopulateArea.bounds;
@@ -41,7 +57,8 @@ public class BoardController: ISaveLoadable<RawBoardControllerData>
     {
         var spawnedItem = _itemSpawnerProvider.SpawnItem(itemData);
         _itemsModel.Items.Add(spawnedItem);
-
+        spawnedItem.Initialize();
+        
         return spawnedItem;
     }
 
@@ -63,14 +80,6 @@ public class BoardController: ISaveLoadable<RawBoardControllerData>
         }
 
         _itemsModel.Items.Clear();
-    }
-    
-    [Inject]
-    public BoardController(Settings settings, BoardItemsModel itemsModel, ItemSpawnerProvider itemSpawnerProvider)
-    {
-        this._settings = settings;
-        this._itemsModel = itemsModel;
-        this._itemSpawnerProvider = itemSpawnerProvider;
     }
 
     public RawBoardControllerData Save()
@@ -94,8 +103,12 @@ public class BoardController: ISaveLoadable<RawBoardControllerData>
         foreach (var rawItemData in data.Items)
         {
             var newItem = SpawnItemFromData(rawItemData);
-            newItem.Initialize();
         }
+    }
+
+    public void Dispose()
+    {
+        Item.ItemCollectedEvent -= OnItemCollected;
     }
 }
 

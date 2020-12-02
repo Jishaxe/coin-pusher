@@ -75,16 +75,13 @@ public class UIController : MonoBehaviour
         {
             var donation = _presentDonationQueue.Dequeue();
             _donationBubbleUiElementController.SetData(donation.Name, donation.Message, donation.ProfileURL, donation.Amount);
-            Debug.Log("setdata");
-
+            
             var finishedAnimation = false;
             
             _donationBubbleUiElementController.Present(() => finishedAnimation = true);
             
 
             yield return new WaitUntil(() => finishedAnimation);
-            
-            Debug.Log("finished presenting");
 
             yield return new WaitForSeconds(_holdDonationBubbleSeconds);
 

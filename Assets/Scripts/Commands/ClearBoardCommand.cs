@@ -19,6 +19,6 @@
 
     public override void Invoke()
     {
-        _coinSpawnController.ClearBoard();
+        _coinSpawnController.RemoveAllCoins();
     }
 }
