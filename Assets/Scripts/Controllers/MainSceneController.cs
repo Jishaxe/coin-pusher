@@ -7,15 +7,17 @@ using Zenject;
 public class MainSceneController: IInitializable, ITickable
 {
     private CoinSpawnController _coinSpawnController;
+    private BoardController _boardController;
     private SaveGameService _saveGameService;
     private RemoteController _remoteController;
     
     [Inject]
-    public MainSceneController(CoinSpawnController coinSpawnController, SaveGameService saveGameService, RemoteController remoteController)
+    public MainSceneController(CoinSpawnController coinSpawnController, SaveGameService saveGameService, RemoteController remoteController, BoardController boardController)
     {
         _coinSpawnController = coinSpawnController;
         _saveGameService = saveGameService;
         _remoteController = remoteController;
+        _boardController = boardController;
     }
 
     public void Initialize()
@@ -33,13 +35,13 @@ public class MainSceneController: IInitializable, ITickable
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            _coinSpawnController.RemoveAllCoins();
+            _boardController.ClearBoard();
             _coinSpawnController.PopulateBoard(53.55f);
         }
 
         if (Input.GetKeyDown(KeyCode.RightControl))
         {
-            _coinSpawnController.RemoveAllCoins();
+            _boardController.ClearBoard();
         }
 
         if (Input.GetKeyDown(KeyCode.Return))

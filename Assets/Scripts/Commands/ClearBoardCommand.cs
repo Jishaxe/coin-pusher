@@ -1,14 +1,14 @@
 ﻿public class ClearBoardCommand : BaseCommand
 {
-    private CoinSpawnController _coinSpawnController;
+    private BoardController _boardController;
     
     public class Data: ICommandData
     {
     }
 
-    public ClearBoardCommand(CoinSpawnController coinSpawnController)
+    public ClearBoardCommand(BoardController boardController)
     {
-        _coinSpawnController = coinSpawnController;
+        _boardController = boardController;
     }
     
     public override void Load(string data)
@@ -19,6 +19,6 @@
 
     public override void Invoke()
     {
-        _coinSpawnController.RemoveAllCoins();
+        _boardController.ClearBoard();
     }
 }

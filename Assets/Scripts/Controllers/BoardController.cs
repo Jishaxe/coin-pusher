@@ -72,7 +72,7 @@ public class BoardController: ISaveLoadable<RawBoardControllerData>, IDisposable
         }
     }
 
-    private void ClearBoard()
+    public void ClearBoard()
     {
         foreach (var item in _itemsModel.Items)
         {

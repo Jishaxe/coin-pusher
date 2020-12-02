@@ -75,14 +75,6 @@ public class CoinSpawnController: MonoBehaviour, ISaveLoadable<RawCoinSpawnContr
         Debug.Log("Populuated, value on board: " + ValueOnBoard);
     }
 
-    public void RemoveAllCoins()
-    {
-        foreach (Coin coin in _boardItems.Coins)
-        {
-            _boardController.RemoveItem(coin);
-        }
-    }
-
     private Vector3 GetCoinDropPosition()
     {
         Vector3 offset = Vector3.Lerp(-_settings.randomCoinDropOffsetFromCenter,

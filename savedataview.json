@@ -6,7 +6,7 @@
   "PusherController": {
     "$type": "RawPusherControllerData, Assembly-CSharp",
     "position": 0.0,
-    "elapsed": 5.10961866
+    "elapsed": 1.60246909
   },
   "CommandController": {
     "$type": "RawCommandController, Assembly-CSharp",
@@ -28,17 +28,4749 @@
       "$type": "System.Collections.Generic.List`1[[RawItemData, Assembly-CSharp]], mscorlib",
       "$values": [
         {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": -0.3692717,
+            "y": 0.519526064,
+            "z": -1.99077439
+          },
+          "rotation": {
+            "x": 270.483337,
+            "y": 246.1706,
+            "z": 165.966751
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 0.03768274,
+            "y": 0.6645461,
+            "z": -1.28676343
+          },
+          "rotation": {
+            "x": 302.938629,
+            "y": 11.9296589,
+            "z": 323.2323
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": 1.74583423,
+            "y": 0.5031755,
+            "z": -1.94966853
+          },
+          "rotation": {
+            "x": 270.361542,
+            "y": 53.9293633,
+            "z": 32.3737144
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": 0.11900524,
+            "y": 0.496895,
+            "z": 0.946735859
+          },
+          "rotation": {
+            "x": 89.84934,
+            "y": 177.221268,
+            "z": 282.800446
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.5682948,
+            "y": 0.5029409,
+            "z": -1.49708867
+          },
+          "rotation": {
+            "x": 89.74131,
+            "y": 71.85474,
+            "z": 88.2161942
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.86998951,
+            "y": 0.5785993,
+            "z": 0.899339139
+          },
+          "rotation": {
+            "x": 270.458,
+            "y": 112.22142,
+            "z": 21.0600719
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.30732381,
+            "y": 0.7399295,
+            "z": -1.255456
+          },
+          "rotation": {
+            "x": 272.870453,
+            "y": 138.545517,
+            "z": 51.87361
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.191858441,
+            "y": 0.532650232,
+            "z": 1.13972843
+          },
+          "rotation": {
+            "x": 278.5322,
+            "y": 67.90332,
+            "z": 8.843831
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.663793,
+            "y": 0.502779543,
+            "z": -0.123613276
+          },
+          "rotation": {
+            "x": 89.76344,
+            "y": 344.315369,
+            "z": 257.750275
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.7955943,
+            "y": 0.502199352,
+            "z": -0.6302914
+          },
+          "rotation": {
+            "x": 270.373779,
+            "y": 75.97543,
+            "z": 239.214722
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.0273892712,
+            "y": 0.568354,
+            "z": -1.95621133
+          },
+          "rotation": {
+            "x": 289.480621,
+            "y": 86.46053,
+            "z": 282.372253
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 0.1704785,
+            "y": 0.6489578,
+            "z": -2.00171328
+          },
+          "rotation": {
+            "x": 284.08783,
+            "y": 65.9070358,
+            "z": 311.255829
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 0.5780966,
+            "y": 0.64721936,
+            "z": -1.13932121
+          },
+          "rotation": {
+            "x": 84.53177,
+            "y": 100.215736,
+            "z": 15.81271
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": -0.00766057055,
+            "y": 0.6560669,
+            "z": -0.0105276145
+          },
+          "rotation": {
+            "x": 293.322144,
+            "y": 318.3294,
+            "z": 91.3561249
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.795824766,
+            "y": 0.5017324,
+            "z": -0.207494676
+          },
+          "rotation": {
+            "x": 89.047554,
+            "y": 305.574,
+            "z": 262.9078
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.16391551,
+            "y": 0.502316058,
+            "z": -2.02500081
+          },
+          "rotation": {
+            "x": 270.507446,
+            "y": 148.166656,
+            "z": 276.37442
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.00993919,
+            "y": 0.5530287,
+            "z": -2.103097
+          },
+          "rotation": {
+            "x": 271.4886,
+            "y": 229.984909,
+            "z": 165.8398
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.483505726,
+            "y": 0.502270639,
+            "z": -0.898151338
+          },
+          "rotation": {
+            "x": 270.170166,
+            "y": 195.782944,
+            "z": 11.147212
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.151431635,
+            "y": 0.5020933,
+            "z": -0.375026077
+          },
+          "rotation": {
+            "x": 270.196838,
+            "y": 261.764221,
+            "z": 159.887115
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.9788088,
+            "y": 0.582951844,
+            "z": 1.215169
+          },
+          "rotation": {
+            "x": 279.522339,
+            "y": 2.73417854,
+            "z": 341.3553
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 1.06004262,
+            "y": 0.558216333,
+            "z": 1.96323991
+          },
+          "rotation": {
+            "x": 271.487274,
+            "y": 325.289978,
+            "z": 101.804283
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": 0.9907656,
+            "y": 0.7077573,
+            "z": 0.560253859
+          },
+          "rotation": {
+            "x": 62.8061943,
+            "y": 234.388733,
+            "z": 44.1923141
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": 1.09696043,
+            "y": 0.49877575,
+            "z": 0.163342223
+          },
+          "rotation": {
+            "x": 89.44503,
+            "y": 295.357727,
+            "z": 319.761749
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.968519747,
+            "y": 0.6988821,
+            "z": 1.12719178
+          },
+          "rotation": {
+            "x": 81.81314,
+            "y": 184.174835,
+            "z": 242.262939
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.3125251,
+            "y": 0.624716461,
+            "z": 0.720808
+          },
+          "rotation": {
+            "x": 292.483521,
+            "y": 346.73172,
+            "z": 94.96134
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.83618152,
+            "y": 0.5020979,
+            "z": -1.37796557
+          },
+          "rotation": {
+            "x": 270.367432,
+            "y": 38.8835678,
+            "z": 352.02063
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.356050074,
+            "y": 0.5020361,
+            "z": -0.243105248
+          },
+          "rotation": {
+            "x": 270.4973,
+            "y": 130.519257,
+            "z": 253.62439
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.631623268,
+            "y": 0.510645,
+            "z": -0.270308
+          },
+          "rotation": {
+            "x": 278.093781,
+            "y": 269.690979,
+            "z": 97.19352
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.6893215,
+            "y": 0.503582358,
+            "z": 0.424023
+          },
+          "rotation": {
+            "x": 284.751923,
+            "y": 269.93042,
+            "z": 149.572662
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 1.14067435,
+            "y": 0.6126205,
+            "z": -1.1103828
+          },
+          "rotation": {
+            "x": 271.2912,
+            "y": 281.410736,
+            "z": 49.175705
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": -0.04104746,
+            "y": 0.632128239,
+            "z": -0.9659421
+          },
+          "rotation": {
+            "x": 303.427032,
+            "y": 12.93049,
+            "z": 13.8990107
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": 0.973643,
+            "y": 0.496880919,
+            "z": 0.7729378
+          },
+          "rotation": {
+            "x": 89.86152,
+            "y": 276.1589,
+            "z": 292.232422
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.299603343,
+            "y": 0.547589064,
+            "z": 0.560427
+          },
+          "rotation": {
+            "x": 282.7826,
+            "y": 348.255463,
+            "z": 85.3933945
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.08705953,
+            "y": 0.610936165,
+            "z": 1.57156765
+          },
+          "rotation": {
+            "x": 56.80088,
+            "y": 9.681224,
+            "z": 36.4776726
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.107761085,
+            "y": 0.596820831,
+            "z": 0.599855244
+          },
+          "rotation": {
+            "x": 293.242432,
+            "y": 349.157,
+            "z": 114.226036
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.244650155,
+            "y": 0.5021995,
+            "z": -1.52127826
+          },
+          "rotation": {
+            "x": 270.342072,
+            "y": 192.945755,
+            "z": 233.917053
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.7759986,
+            "y": 0.5534979,
+            "z": 1.57356131
+          },
+          "rotation": {
+            "x": 271.472717,
+            "y": 222.6956,
+            "z": 270.5954
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.0178401861,
+            "y": 0.609895647,
+            "z": -1.05231524
+          },
+          "rotation": {
+            "x": 302.5039,
+            "y": 12.5066357,
+            "z": 272.8732
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.8518707,
+            "y": 0.5478192,
+            "z": 0.6869139
+          },
+          "rotation": {
+            "x": 271.917145,
+            "y": 128.963623,
+            "z": 265.387573
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 1.38615537,
+            "y": 0.5795733,
+            "z": 1.51317525
+          },
+          "rotation": {
+            "x": 89.6642761,
+            "y": 348.763824,
+            "z": 190.627625
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": -0.450509042,
+            "y": 0.519696951,
+            "z": -1.05522776
+          },
+          "rotation": {
+            "x": 270.279053,
+            "y": 221.581223,
+            "z": 192.040726
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": 1.44227779,
+            "y": 0.7170406,
+            "z": -2.030302
+          },
+          "rotation": {
+            "x": 89.1855545,
+            "y": 307.61084,
+            "z": 175.207123
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": 0.856049955,
+            "y": 0.6373265,
+            "z": 1.21518767
+          },
+          "rotation": {
+            "x": 80.4267,
+            "y": 183.084686,
+            "z": 283.032532
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.5429701,
+            "y": 0.5017781,
+            "z": 1.14911318
+          },
+          "rotation": {
+            "x": 270.835083,
+            "y": 245.939056,
+            "z": 125.770844
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.83026147,
+            "y": 0.502401,
+            "z": 1.90808642
+          },
+          "rotation": {
+            "x": 89.70326,
+            "y": 157.266983,
+            "z": 289.0099
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.5235408,
+            "y": 0.5902771,
+            "z": 0.4408299
+          },
+          "rotation": {
+            "x": 296.349731,
+            "y": 341.000732,
+            "z": 79.93269
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.638214946,
+            "y": 0.500529,
+            "z": 0.901063144
+          },
+          "rotation": {
+            "x": 271.312836,
+            "y": 275.463257,
+            "z": 133.5153
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.07221931,
+            "y": 0.582097054,
+            "z": -0.09296968
+          },
+          "rotation": {
+            "x": 293.360657,
+            "y": 318.704834,
+            "z": 17.920826
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 0.444483757,
+            "y": 0.6871671,
+            "z": 1.9035424
+          },
+          "rotation": {
+            "x": 59.51641,
+            "y": 6.14570761,
+            "z": 241.41658
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": -4.364644E-05,
+            "y": 0.6804046,
+            "z": -1.66211915
+          },
+          "rotation": {
+            "x": 302.951355,
+            "y": 5.86011171,
+            "z": 342.3103
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": 0.236688048,
+            "y": 0.5836124,
+            "z": 1.42119586
+          },
+          "rotation": {
+            "x": 55.28605,
+            "y": 8.871283,
+            "z": 39.19297
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.260949,
+            "y": 0.63662976,
+            "z": 1.98288023
+          },
+          "rotation": {
+            "x": 88.57839,
+            "y": 156.181549,
+            "z": 290.5243
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.727068841,
+            "y": 0.5017901,
+            "z": 1.401692
+          },
+          "rotation": {
+            "x": 89.2829056,
+            "y": 356.335846,
+            "z": 57.9017334
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.485897332,
+            "y": 0.5355824,
+            "z": 1.43254447
+          },
+          "rotation": {
+            "x": 279.3023,
+            "y": 19.7616425,
+            "z": 46.1591644
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.10933125,
+            "y": 0.502141,
+            "z": 1.120171
+          },
+          "rotation": {
+            "x": 270.052338,
+            "y": 355.6316,
+            "z": 0.0
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.711962938,
+            "y": 0.543084264,
+            "z": 0.02221686
+          },
+          "rotation": {
+            "x": 281.617126,
+            "y": 334.971954,
+            "z": 135.2363
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.15571082,
+            "y": 0.5923388,
+            "z": 0.00214467687
+          },
+          "rotation": {
+            "x": 81.1214142,
+            "y": 343.775146,
+            "z": 334.248474
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 0.965968668,
+            "y": 0.5196032,
+            "z": -1.22309315
+          },
+          "rotation": {
+            "x": 270.611664,
+            "y": 179.611481,
+            "z": 268.8158
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": 0.7060652,
+            "y": 0.5888381,
+            "z": 0.9406638
+          },
+          "rotation": {
+            "x": 284.323761,
+            "y": 4.895179,
+            "z": 337.833618
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": 0.8570083,
+            "y": 0.497478753,
+            "z": 0.441786051
+          },
+          "rotation": {
+            "x": 89.89721,
+            "y": 13.4095154,
+            "z": 0.0
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.177038,
+            "y": 0.501710832,
+            "z": 1.7234354
+          },
+          "rotation": {
+            "x": 270.983765,
+            "y": 125.43882,
+            "z": 278.937866
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.25766814,
+            "y": 0.5023559,
+            "z": -0.198954567
+          },
+          "rotation": {
+            "x": 270.530823,
+            "y": 23.0724525,
+            "z": 7.38114452
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.6032562,
+            "y": 0.5775918,
+            "z": -1.06614542
+          },
+          "rotation": {
+            "x": 275.771057,
+            "y": 280.0249,
+            "z": 112.6457
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.1679377,
+            "y": 0.501216769,
+            "z": 0.342444777
+          },
+          "rotation": {
+            "x": 270.816864,
+            "y": 191.724091,
+            "z": 174.638657
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.09647453,
+            "y": 0.5529251,
+            "z": 0.181608632
+          },
+          "rotation": {
+            "x": 83.9297562,
+            "y": 338.527985,
+            "z": 264.2482
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.0392916948,
+            "y": 0.5931945,
+            "z": -0.0375188068
+          },
+          "rotation": {
+            "x": 293.455627,
+            "y": 318.1276,
+            "z": 71.3538742
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 0.5028952,
+            "y": 0.632154465,
+            "z": 0.133092925
+          },
+          "rotation": {
+            "x": 294.899567,
+            "y": 336.5288,
+            "z": 326.7426
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": 1.39999473,
+            "y": 0.582262456,
+            "z": -1.769555
+          },
+          "rotation": {
+            "x": 277.3437,
+            "y": 310.7951,
+            "z": 247.627014
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": 1.22228265,
+            "y": 0.542039037,
+            "z": -0.8711405
+          },
+          "rotation": {
+            "x": 270.35553,
+            "y": 86.17651,
+            "z": 249.944244
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.259756625,
+            "y": 0.5478713,
+            "z": -1.95251346
+          },
+          "rotation": {
+            "x": 282.790131,
+            "y": 69.2793961,
+            "z": 356.2551
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.51310921,
+            "y": 0.539472044,
+            "z": -1.78749251
+          },
+          "rotation": {
+            "x": 277.484863,
+            "y": 301.540771,
+            "z": 12.2100506
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.22631335,
+            "y": 0.502448559,
+            "z": 0.511108637
+          },
+          "rotation": {
+            "x": 89.79158,
+            "y": 174.673126,
+            "z": 192.109329
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.4486018,
+            "y": 0.590702832,
+            "z": 0.544488966
+          },
+          "rotation": {
+            "x": 295.181,
+            "y": 342.256439,
+            "z": 0.36543107
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.185487926,
+            "y": 0.6207039,
+            "z": 2.085125
+          },
+          "rotation": {
+            "x": 53.37732,
+            "y": 326.96286,
+            "z": 286.472839
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.4379419,
+            "y": 0.6301427,
+            "z": 2.08996868
+          },
+          "rotation": {
+            "x": 49.2949524,
+            "y": 336.0195,
+            "z": 297.36673
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.925220966,
+            "y": 0.6345907,
+            "z": 1.68914711
+          },
+          "rotation": {
+            "x": 83.91048,
+            "y": 46.79422,
+            "z": 15.304801
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 1.38920784,
+            "y": 0.7571665,
+            "z": 2.21234
+          },
+          "rotation": {
+            "x": 355.5554,
+            "y": 9.4384985,
+            "z": 298.800171
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 1.3876003,
+            "y": 0.59389323,
+            "z": 0.9522048
+          },
+          "rotation": {
+            "x": 89.15281,
+            "y": 214.388489,
+            "z": 233.0206
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": -0.226899073,
+            "y": 0.54509145,
+            "z": 0.777475536
+          },
+          "rotation": {
+            "x": 71.59351,
+            "y": 185.179642,
+            "z": 145.788559
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.485141337,
+            "y": 0.7099446,
+            "z": -0.671700656
+          },
+          "rotation": {
+            "x": 310.761169,
+            "y": 357.596832,
+            "z": 328.7624
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.689933,
+            "y": 0.502766669,
+            "z": 1.523937
+          },
+          "rotation": {
+            "x": 89.93439,
+            "y": 52.3519974,
+            "z": 0.0
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.323792,
+            "y": 0.562774241,
+            "z": -1.54626215
+          },
+          "rotation": {
+            "x": 287.6305,
+            "y": 281.297577,
+            "z": 9.564197
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.456294,
+            "y": 0.5007525,
+            "z": -1.22488225
+          },
+          "rotation": {
+            "x": 89.15166,
+            "y": 243.195313,
+            "z": 238.491013
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.115899958,
+            "y": 0.544403,
+            "z": 0.417212784
+          },
+          "rotation": {
+            "x": 281.768951,
+            "y": 45.1974335,
+            "z": 13.7286415
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.8646844,
+            "y": 0.625695467,
+            "z": -1.96850729
+          },
+          "rotation": {
+            "x": 309.0694,
+            "y": 297.243439,
+            "z": 52.74691
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.0988258,
+            "y": 0.616794169,
+            "z": 1.41117978
+          },
+          "rotation": {
+            "x": 54.82025,
+            "y": 13.6651278,
+            "z": 109.059509
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 0.5078335,
+            "y": 0.6515056,
+            "z": 2.0199604
+          },
+          "rotation": {
+            "x": 60.5759926,
+            "y": 6.130412,
+            "z": 344.776184
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": 1.096154,
+            "y": 0.6703416,
+            "z": -0.588143051
+          },
+          "rotation": {
+            "x": 283.935547,
+            "y": 12.4898014,
+            "z": 305.823975
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.00313663,
+            "y": 0.7269016,
+            "z": 0.692325532
+          },
+          "rotation": {
+            "x": 62.9471741,
+            "y": 234.227509,
+            "z": 298.0979
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.90867877,
+            "y": 0.595628142,
+            "z": -1.5430572
+          },
+          "rotation": {
+            "x": 86.67504,
+            "y": 284.4397,
+            "z": 281.5487
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.3563983,
+            "y": 0.543085754,
+            "z": -0.5750055
+          },
+          "rotation": {
+            "x": 281.5161,
+            "y": 225.251,
+            "z": 117.856392
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.221582651,
+            "y": 0.6832842,
+            "z": -0.9372402
+          },
+          "rotation": {
+            "x": 351.1379,
+            "y": 76.8314,
+            "z": 249.262268
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.49769032,
+            "y": 0.7148457,
+            "z": -1.16677606
+          },
+          "rotation": {
+            "x": 275.764282,
+            "y": 278.0608,
+            "z": 335.7746
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 1.64218891,
+            "y": 0.7196659,
+            "z": 1.81821883
+          },
+          "rotation": {
+            "x": 88.817,
+            "y": 54.5880241,
+            "z": 280.465
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 1.82328761,
+            "y": 0.647501945,
+            "z": -1.17275512
+          },
+          "rotation": {
+            "x": 285.0307,
+            "y": 350.371338,
+            "z": 190.980988
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": -0.034365017,
+            "y": 0.5771841,
+            "z": 1.0110116
+          },
+          "rotation": {
+            "x": 277.519653,
+            "y": 62.2934761,
+            "z": 23.1983032
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": 1.29602778,
+            "y": 0.5523423,
+            "z": 0.521398544
+          },
+          "rotation": {
+            "x": 270.581146,
+            "y": 347.511475,
+            "z": 311.2201
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.0971421,
+            "y": 0.60748744,
+            "z": -2.10433388
+          },
+          "rotation": {
+            "x": 270.956116,
+            "y": 99.88717,
+            "z": 247.739838
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.889149,
+            "y": 0.6581998,
+            "z": -0.72701335
+          },
+          "rotation": {
+            "x": 283.667023,
+            "y": 7.87089062,
+            "z": 53.6614265
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.6222709,
+            "y": 0.5747263,
+            "z": 0.130498439
+          },
+          "rotation": {
+            "x": 290.853577,
+            "y": 334.07373,
+            "z": 51.74321
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.7438974,
+            "y": 0.547995746,
+            "z": 0.006138887
+          },
+          "rotation": {
+            "x": 78.28177,
+            "y": 103.522423,
+            "z": 95.17427
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 0.404852271,
+            "y": 0.7388527,
+            "z": 0.926527441
+          },
+          "rotation": {
+            "x": 294.246735,
+            "y": 290.6705,
+            "z": 45.00251
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": 0.07931232,
+            "y": 0.71271193,
+            "z": -0.659622
+          },
+          "rotation": {
+            "x": 314.647156,
+            "y": 342.3933,
+            "z": 85.01587
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": 0.915658653,
+            "y": 0.550909162,
+            "z": -0.322375685
+          },
+          "rotation": {
+            "x": 89.313,
+            "y": 305.227173,
+            "z": 19.30998
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.55489,
+            "y": 0.5032435,
+            "z": 0.27090168
+          },
+          "rotation": {
+            "x": 89.61794,
+            "y": 234.022934,
+            "z": 76.3557739
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.86338151,
+            "y": 0.5570623,
+            "z": -1.3487885
+          },
+          "rotation": {
+            "x": 88.32228,
+            "y": 228.413025,
+            "z": 53.7487068
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.8518131,
+            "y": 0.556826532,
+            "z": -0.6804639
+          },
+          "rotation": {
+            "x": 271.877838,
+            "y": 53.740303,
+            "z": 304.0338
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.94585085,
+            "y": 0.6462797,
+            "z": -1.50489557
+          },
+          "rotation": {
+            "x": 80.7117844,
+            "y": 173.032486,
+            "z": 161.580536
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.84740257,
+            "y": 0.5576329,
+            "z": 1.95898056
+          },
+          "rotation": {
+            "x": 270.6136,
+            "y": 285.876251,
+            "z": 36.5787773
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.463033,
+            "y": 0.5554172,
+            "z": -0.310737669
+          },
+          "rotation": {
+            "x": 88.29143,
+            "y": 356.294647,
+            "z": 345.8589
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.0174523257,
+            "y": 0.606336951,
+            "z": -1.32280016
+          },
+          "rotation": {
+            "x": 301.896973,
+            "y": 11.690299,
+            "z": 77.5347061
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 1.08727932,
+            "y": 0.669404745,
+            "z": 0.0053452733
+          },
+          "rotation": {
+            "x": 279.639526,
+            "y": 159.872879,
+            "z": 185.301773
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 0.485525459,
+            "y": 0.8154015,
+            "z": 1.77766871
+          },
+          "rotation": {
+            "x": 285.4431,
+            "y": 206.600281,
+            "z": 212.163971
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": -0.358349,
+            "y": 0.59187746,
+            "z": 1.37671816
+          },
+          "rotation": {
+            "x": 279.0617,
+            "y": 24.28831,
+            "z": 18.0006485
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": 1.14698517,
+            "y": 0.496500671,
+            "z": -0.5424282
+          },
+          "rotation": {
+            "x": 270.363159,
+            "y": 286.4461,
+            "z": 96.6650543
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.155745,
+            "y": 0.6114328,
+            "z": 1.66754258
+          },
+          "rotation": {
+            "x": 56.9444847,
+            "y": 9.311553,
+            "z": 356.501282
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.436613619,
+            "y": 0.647279561,
+            "z": -0.686809838
+          },
+          "rotation": {
+            "x": 310.81543,
+            "y": 357.571777,
+            "z": 350.204742
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.08604729,
+            "y": 0.7525322,
+            "z": 0.7373244
+          },
+          "rotation": {
+            "x": 64.98076,
+            "y": 232.152191,
+            "z": 305.7018
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.41185078,
+            "y": 0.5017701,
+            "z": 2.08792782
+          },
+          "rotation": {
+            "x": 89.42939,
+            "y": 214.190018,
+            "z": 204.278259
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.90949333,
+            "y": 0.549259961,
+            "z": 1.41815841
+          },
+          "rotation": {
+            "x": 283.404327,
+            "y": 107.944115,
+            "z": 217.155823
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.9018113,
+            "y": 0.650004447,
+            "z": -1.530342
+          },
+          "rotation": {
+            "x": 272.104218,
+            "y": 123.907471,
+            "z": 181.762726
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.501930833,
+            "y": 0.642011,
+            "z": 1.32654893
+          },
+          "rotation": {
+            "x": 55.3771477,
+            "y": 21.7456188,
+            "z": 75.50072
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 1.43307793,
+            "y": 0.682902753,
+            "z": 1.28120863
+          },
+          "rotation": {
+            "x": 87.8419647,
+            "y": 189.188614,
+            "z": 211.089767
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": 0.6449445,
+            "y": 0.6552001,
+            "z": 0.9112842
+          },
+          "rotation": {
+            "x": 284.689728,
+            "y": 2.28948236,
+            "z": 12.92398
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": -0.5512845,
+            "y": 0.5319531,
+            "z": 1.72708392
+          },
+          "rotation": {
+            "x": 283.039978,
+            "y": 1.81636655,
+            "z": 64.25013
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.26859948,
+            "y": 0.581776142,
+            "z": -0.108400524
+          },
+          "rotation": {
+            "x": 293.4021,
+            "y": 319.5511,
+            "z": 118.4555
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.42781052,
+            "y": 0.6133658,
+            "z": 0.906581759
+          },
+          "rotation": {
+            "x": 288.203522,
+            "y": 261.6883,
+            "z": 127.323364
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.0087198,
+            "y": 0.6867108,
+            "z": 1.539136
+          },
+          "rotation": {
+            "x": 277.567535,
+            "y": 216.240219,
+            "z": 19.7910423
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.8892647,
+            "y": 0.570895,
+            "z": -1.7836771
+          },
+          "rotation": {
+            "x": 70.21336,
+            "y": 241.0337,
+            "z": 264.2463
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.427163541,
+            "y": 0.5355027,
+            "z": 0.09317587
+          },
+          "rotation": {
+            "x": 80.6537552,
+            "y": 72.4163742,
+            "z": 91.63091
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 0.151224643,
+            "y": 0.7651191,
+            "z": 1.4175967
+          },
+          "rotation": {
+            "x": 299.4197,
+            "y": 211.983521,
+            "z": 103.473358
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 0.686273158,
+            "y": 0.748790562,
+            "z": 0.3800209
+          },
+          "rotation": {
+            "x": 60.8731041,
+            "y": 236.12738,
+            "z": 208.849579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": 1.86197782,
+            "y": 0.683248,
+            "z": 0.412888169
+          },
+          "rotation": {
+            "x": 84.02702,
+            "y": 211.346115,
+            "z": 178.012512
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": -0.00135574059,
+            "y": 0.581064939,
+            "z": -0.6981523
+          },
+          "rotation": {
+            "x": 303.505066,
+            "y": 11.8596087,
+            "z": 47.7023277
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.01797405,
+            "y": 0.6058631,
+            "z": -1.42743468
+          },
+          "rotation": {
+            "x": 301.8484,
+            "y": 9.736701,
+            "z": 10.4350157
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.4288041,
+            "y": 0.6281161,
+            "z": -0.7510107
+          },
+          "rotation": {
+            "x": 309.867371,
+            "y": 358.317,
+            "z": 10.241643
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.42241955,
+            "y": 0.750868142,
+            "z": 0.4932191
+          },
+          "rotation": {
+            "x": 84.53902,
+            "y": 192.138321,
+            "z": 40.44022
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.28223443,
+            "y": 0.663354933,
+            "z": -2.07203937
+          },
+          "rotation": {
+            "x": 270.8935,
+            "y": 136.143829,
+            "z": 221.2474
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.124519318,
+            "y": 0.6333416,
+            "z": 1.76932847
+          },
+          "rotation": {
+            "x": 47.87664,
+            "y": 320.337158,
+            "z": 128.653839
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.211796448,
+            "y": 0.6622019,
+            "z": -0.398305863
+          },
+          "rotation": {
+            "x": 31.4993572,
+            "y": 24.8339329,
+            "z": 349.2876
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 1.05890369,
+            "y": 0.7404057,
+            "z": -0.547606766
+          },
+          "rotation": {
+            "x": 76.12799,
+            "y": 192.060272,
+            "z": 269.046417
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": 1.03063321,
+            "y": 0.7030472,
+            "z": 1.9868046
+          },
+          "rotation": {
+            "x": 82.3120346,
+            "y": 156.5728,
+            "z": 188.284241
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": 1.19016206,
+            "y": 0.496830165,
+            "z": -0.850894034
+          },
+          "rotation": {
+            "x": 89.6043549,
+            "y": 273.2395,
+            "z": 159.27124
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.11953413,
+            "y": 0.6772893,
+            "z": -1.61838233
+          },
+          "rotation": {
+            "x": 17.1699753,
+            "y": 292.5978,
+            "z": 349.028961
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.344183922,
+            "y": 0.613882959,
+            "z": 1.23151815
+          },
+          "rotation": {
+            "x": 55.48166,
+            "y": 19.0999069,
+            "z": 351.960968
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.704299152,
+            "y": 0.745720267,
+            "z": 1.07465088
+          },
+          "rotation": {
+            "x": 291.069824,
+            "y": 289.045715,
+            "z": 25.7817421
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.26640058,
+            "y": 0.554061949,
+            "z": -0.433970869
+          },
+          "rotation": {
+            "x": 87.72419,
+            "y": 354.82016,
+            "z": 317.4939
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.6881522,
+            "y": 0.5488546,
+            "z": -1.617509
+          },
+          "rotation": {
+            "x": 86.81544,
+            "y": 276.1697,
+            "z": 319.665527
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.418116,
+            "y": 0.693474352,
+            "z": 0.50201124
+          },
+          "rotation": {
+            "x": 275.6039,
+            "y": 15.4247017,
+            "z": 24.6322746
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.0457517877,
+            "y": 0.685347,
+            "z": 0.57719636
+          },
+          "rotation": {
+            "x": 283.796143,
+            "y": 309.565643,
+            "z": 146.316849
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": -0.497479528,
+            "y": 0.783675134,
+            "z": 2.00666928
+          },
+          "rotation": {
+            "x": 53.99664,
+            "y": 327.7786,
+            "z": 90.7497559
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": 0.09018623,
+            "y": 0.683401644,
+            "z": 0.9833592
+          },
+          "rotation": {
+            "x": 69.285,
+            "y": 113.8078,
+            "z": 202.7049
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.658735931,
+            "y": 0.629741132,
+            "z": -0.275758535
+          },
+          "rotation": {
+            "x": 84.01044,
+            "y": 24.7042236,
+            "z": 93.74733
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.445938,
+            "y": 0.5504978,
+            "z": -1.32592416
+          },
+          "rotation": {
+            "x": 87.85051,
+            "y": 103.502655,
+            "z": 62.96216
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.6141441,
+            "y": 0.678913534,
+            "z": -0.3326651
+          },
+          "rotation": {
+            "x": 84.0654755,
+            "y": 25.6178722,
+            "z": 146.231964
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.085014,
+            "y": 0.6850938,
+            "z": -1.159586
+          },
+          "rotation": {
+            "x": 270.888672,
+            "y": 251.221375,
+            "z": 168.019989
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.9643893,
+            "y": 0.68110013,
+            "z": 0.4799538
+          },
+          "rotation": {
+            "x": 297.401245,
+            "y": 56.3233376,
+            "z": 11.4534807
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 1.80191123,
+            "y": 0.6295299,
+            "z": 1.89325
+          },
+          "rotation": {
+            "x": 88.65666,
+            "y": 57.0892868,
+            "z": 51.6414642
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": -0.309548974,
+            "y": 0.6351392,
+            "z": -2.114756
+          },
+          "rotation": {
+            "x": 289.043518,
+            "y": 225.721832,
+            "z": 166.287018
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.90059459,
+            "y": 0.7172576,
+            "z": 0.700627744
+          },
+          "rotation": {
+            "x": 276.4429,
+            "y": 43.3188057,
+            "z": 59.4461823
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 2.06432056,
+            "y": 0.5700833,
+            "z": -1.748855
+          },
+          "rotation": {
+            "x": 70.11804,
+            "y": 241.997559,
+            "z": 123.545677
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.198432878,
+            "y": 0.6320088,
+            "z": 1.8161813
+          },
+          "rotation": {
+            "x": 48.63191,
+            "y": 320.4128,
+            "z": 351.250122
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.37132585,
+            "y": 0.69791,
+            "z": -0.168309078
+          },
+          "rotation": {
+            "x": 284.5021,
+            "y": 144.463058,
+            "z": 302.065369
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.5974234,
+            "y": 0.610316932,
+            "z": 1.48112929
+          },
+          "rotation": {
+            "x": 288.010376,
+            "y": 228.498138,
+            "z": 161.508331
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.84908152,
+            "y": 0.5022142,
+            "z": -0.936715841
+          },
+          "rotation": {
+            "x": 270.096924,
+            "y": 234.853088,
+            "z": 0.0
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.341436863,
+            "y": 0.709219,
+            "z": 0.2760968
+          },
+          "rotation": {
+            "x": 75.5877457,
+            "y": 91.69973,
+            "z": 349.7926
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 0.433149755,
+            "y": 0.6843922,
+            "z": -2.00786781
+          },
+          "rotation": {
+            "x": 289.963135,
+            "y": 65.9262161,
+            "z": 288.506653
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 1.79998374,
+            "y": 0.6687243,
+            "z": -0.614198
+          },
+          "rotation": {
+            "x": 289.941833,
+            "y": 135.564209,
+            "z": 121.98893
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": -0.0645363554,
+            "y": 0.654998541,
+            "z": -0.8947998
+          },
+          "rotation": {
+            "x": 303.798035,
+            "y": 12.0990677,
+            "z": 7.31823254
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": 0.46405372,
+            "y": 0.5991879,
+            "z": 0.678264737
+          },
+          "rotation": {
+            "x": 292.87384,
+            "y": 345.8804,
+            "z": 206.363312
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.45775461,
+            "y": 0.6096556,
+            "z": -0.851235151
+          },
+          "rotation": {
+            "x": 303.17334,
+            "y": 48.2461929,
+            "z": 301.3565
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.5560759,
+            "y": 0.6878308,
+            "z": 1.61173475
+          },
+          "rotation": {
+            "x": 71.7925,
+            "y": 46.0175171,
+            "z": 145.555313
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.60875034,
+            "y": 0.5696242,
+            "z": -0.476063728
+          },
+          "rotation": {
+            "x": 70.36067,
+            "y": 301.2148,
+            "z": 215.107346
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 1.0,
+          "position": {
+            "x": 0.55356735,
+            "y": 0.724215448,
+            "z": -1.86872423
+          },
+          "rotation": {
+            "x": 70.1427155,
+            "y": 246.981674,
+            "z": 41.763607
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.5,
+          "position": {
+            "x": 0.116334215,
+            "y": 0.758712232,
+            "z": 2.12168026
+          },
+          "rotation": {
+            "x": 6.78660631,
+            "y": 324.3615,
+            "z": 314.3403
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.1,
+          "position": {
+            "x": -0.247576937,
+            "y": 0.646301866,
+            "z": 1.2904321
+          },
+          "rotation": {
+            "x": 279.6406,
+            "y": 21.9579563,
+            "z": 325.6405
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.3689684,
+            "y": 0.6780796,
+            "z": 1.44160759
+          },
+          "rotation": {
+            "x": 287.086975,
+            "y": 351.584045,
+            "z": 331.537323
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 0.8875406,
+            "y": 0.708313644,
+            "z": -1.51743031
+          },
+          "rotation": {
+            "x": 272.062317,
+            "y": 129.27,
+            "z": 244.294174
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.42467237,
+            "y": 0.626059234,
+            "z": -1.56404459
+          },
+          "rotation": {
+            "x": 277.1403,
+            "y": 309.8893,
+            "z": 307.0647
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": -0.6373224,
+            "y": 0.582209051,
+            "z": 1.74117887
+          },
+          "rotation": {
+            "x": 284.814941,
+            "y": 2.654364,
+            "z": 296.797424
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.405996,
+            "y": 0.682194054,
+            "z": -1.57386458
+          },
+          "rotation": {
+            "x": 276.367554,
+            "y": 311.319275,
+            "z": 22.5677433
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
+          "$type": "RawCoinData, Assembly-CSharp",
+          "markingURL": "https://pbs.twimg.com/profile_images/1264943635365277697/eSfno0BN_400x400.jpg",
+          "value": 0.01,
+          "position": {
+            "x": 1.65488458,
+            "y": 0.669760764,
+            "z": 0.84511137
+          },
+          "rotation": {
+            "x": 275.442322,
+            "y": 80.64882,
+            "z": 23.1836
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawCoinData"
+        },
+        {
           "$type": "RawItemGoalData, Assembly-CSharp",
           "itemGoalType": "BIG_COIN",
           "position": {
-            "x": 1.44165456,
-            "y": 0.5689511,
-            "z": 1.209736
+            "x": 1.69046009,
+            "y": 0.630780935,
+            "z": 0.344403267
           },
           "rotation": {
-            "x": 81.96134,
-            "y": 150.756958,
-            "z": 248.322449
+            "x": 275.1916,
+            "y": 27.4073868,
+            "z": 186.99971
           },
           "velocity": {
             "x": 0.0,
@@ -56,39 +4788,14 @@
           "$type": "RawItemGoalData, Assembly-CSharp",
           "itemGoalType": "BIG_COIN",
           "position": {
-            "x": -121.1031,
-            "y": -621.1557,
-            "z": 50.4864235
+            "x": 1.65513384,
+            "y": 0.512672067,
+            "z": 0.9019428
           },
           "rotation": {
-            "x": 42.4725952,
-            "y": 198.653625,
-            "z": 18.3677235
-          },
-          "velocity": {
-            "x": -10.6599808,
-            "y": -110.368622,
-            "z": 4.440015
-          },
-          "angularVelocity": {
-            "x": 2.3395617,
-            "y": 0.0990122259,
-            "z": 3.21997738
-          },
-          "ItemType": "RawItemGoalData"
-        },
-        {
-          "$type": "RawItemGoalData, Assembly-CSharp",
-          "itemGoalType": "BIG_COIN",
-          "position": {
-            "x": 0.865917,
-            "y": 0.5609706,
-            "z": 1.63151932
-          },
-          "rotation": {
-            "x": 82.63913,
-            "y": 148.774658,
-            "z": 325.4934
+            "x": 89.59458,
+            "y": 298.8701,
+            "z": 354.327637
           },
           "velocity": {
             "x": 0.0,
@@ -106,14 +4813,14 @@
           "$type": "RawItemGoalData, Assembly-CSharp",
           "itemGoalType": "BIG_COIN",
           "position": {
-            "x": 1.69476879,
-            "y": 0.513554156,
-            "z": 0.7444463
+            "x": 1.72212625,
+            "y": 0.6511607,
+            "z": -0.40134564
           },
           "rotation": {
-            "x": 270.083923,
-            "y": 299.9666,
-            "z": 0.0
+            "x": 290.7969,
+            "y": 137.295151,
+            "z": 288.131134
           },
           "velocity": {
             "x": 0.0,
@@ -131,24 +4838,49 @@
           "$type": "RawItemGoalData, Assembly-CSharp",
           "itemGoalType": "BIG_COIN",
           "position": {
-            "x": -68.89428,
-            "y": -574.1771,
-            "z": -11.22811
+            "x": -0.5512246,
+            "y": 0.6361236,
+            "z": 0.256888747
           },
           "rotation": {
-            "x": 345.142761,
-            "y": 255.455719,
-            "z": 142.035782
+            "x": 280.6205,
+            "y": 296.4039,
+            "z": 76.8350754
           },
           "velocity": {
-            "x": -6.27860546,
-            "y": -106.358551,
-            "z": -0.9084446
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
           },
           "angularVelocity": {
-            "x": 0.955544055,
-            "y": 1.13357449,
-            "z": -3.63957644
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ItemType": "RawItemGoalData"
+        },
+        {
+          "$type": "RawItemGoalData, Assembly-CSharp",
+          "itemGoalType": "BIG_COIN",
+          "position": {
+            "x": 1.72097158,
+            "y": 0.56541574,
+            "z": 0.113002039
+          },
+          "rotation": {
+            "x": 274.977722,
+            "y": 31.0675526,
+            "z": 328.685028
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "angularVelocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
           },
           "ItemType": "RawItemGoalData"
         }
